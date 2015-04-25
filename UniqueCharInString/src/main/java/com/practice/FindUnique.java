@@ -10,6 +10,11 @@ import java.util.Set;
 import java.util.Map.Entry;
 
 public class FindUnique {
+	
+	public static boolean findLeastRepeatingCharacter (String word) {
+		return false;
+	}
+	
 	/**
 	 * Checking if String has unique Characters
 	 * only works for lower case string. 
@@ -56,31 +61,6 @@ public class FindUnique {
 
 	
 
-
-	/* * Finds first non repeated character in a String in just one pass. 
-	 * * It uses two storage to cut down one iteration, standard space vs time 
-	 * * trade-off.Since we store repeated and non-repeated character separately, 
-	 * * at the end of iteration, first element from List is our first non 
-	 * * repeated character from String. */ 
-
-	public static char firstNonRepeatingChar(String word) { 
-		Set<Character> repeating = new HashSet<>();
-		List<Character> nonRepeating = new ArrayList<>();
-
-		for (int i = 0; i < word.length(); i++) { 
-			char letter = word.charAt(i);
-			if (repeating.contains(letter)) { 
-				continue;
-			} 
-			if (nonRepeating.contains(letter)) { 
-				nonRepeating.remove((Character) letter);
-				repeating.add(letter);
-			} else { 
-				nonRepeating.add(letter);
-			} 
-		} 
-		return nonRepeating.get(0);
-	} 
 
 	/* Using HashMap to find first non-repeated character from String in Java. 
 	Algorithm : 
@@ -184,6 +164,33 @@ public class FindUnique {
 	}
 
 
+	/* * Finds first non repeated character in a String in just one pass. 
+	 * * It uses two storage to cut down one iteration, 
+	 * standard space vs time trade-off. 
+	 * * Since we store repeated and non-repeated character separately, 
+	 * * at the end of iteration, first element from List is our first non 
+	 * * repeated character from String. */ 
+	
+	public static char firstUniqueCharUsingTwoMaps(String word) { 
+		Set<Character> repeatingChars = new HashSet<>();
+		List<Character> nonRepeatingChars = new ArrayList<>();
+	
+		for (int i = 0; i < word.length(); i++) { 
+			char letter = word.charAt(i);
+			
+			if (repeatingChars.contains(letter)) { 
+				continue;
+			} 
+			if (nonRepeatingChars.contains(letter)) { 
+				nonRepeatingChars.remove((Character) letter);
+				repeatingChars.add(letter);
+			} else { 
+				nonRepeatingChars.add(letter);
+			} 
+		} 
+		return nonRepeatingChars.get(0);
+	}
+
 	/** * Java Program to find first duplicate, non-repeated character in a String. 
 	 * * It demonstrate three simple example to do this programming problem. * 
 	 * * @author Javarevisited */ 
@@ -209,32 +216,4 @@ public class FindUnique {
 		throw new RuntimeException("didn't find any non repeated Character");
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
