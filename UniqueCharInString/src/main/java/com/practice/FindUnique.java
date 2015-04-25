@@ -171,7 +171,7 @@ public class FindUnique {
 	 * * at the end of iteration, first element from List is our first non 
 	 * * repeated character from String. */ 
 	
-	public static char firstUniqueCharUsingTwoMaps(String word) { 
+	public static char firstUniqueCharUsingMapAndList(String word) { 
 		Set<Character> repeatingChars = new HashSet<>();
 		List<Character> nonRepeatingChars = new ArrayList<>();
 	

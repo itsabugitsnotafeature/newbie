@@ -9,13 +9,13 @@ public class FindUniqueTest extends TestCase {
 
 	@Test
 	public void testFirstUniqueCharUsingTwoMaps() {
-		assertEquals('b', FindUnique.firstUniqueCharUsingTwoMaps("abcdefghija")); 
-		assertEquals('h', FindUnique.firstUniqueCharUsingTwoMaps("hello")); 
-		assertEquals('J', FindUnique.firstUniqueCharUsingTwoMaps("Java")); 
-		assertEquals('i', FindUnique.firstUniqueCharUsingTwoMaps("simplest"));
-		assertEquals('c', FindUnique.firstUniqueCharUsingTwoMaps("compression"));
-		assertEquals('u', FindUnique.firstUniqueCharUsingTwoMaps("communication"));
-		assertEquals('b', FindUnique.firstUniqueCharUsingTwoMaps("aab"));
+		assertEquals('b', FindUnique.firstUniqueCharUsingMapAndList("abcdefghija")); 
+		assertEquals('h', FindUnique.firstUniqueCharUsingMapAndList("hello")); 
+		assertEquals('J', FindUnique.firstUniqueCharUsingMapAndList("Java")); 
+		assertEquals('i', FindUnique.firstUniqueCharUsingMapAndList("simplest"));
+		assertEquals('c', FindUnique.firstUniqueCharUsingMapAndList("compression"));
+		assertEquals('u', FindUnique.firstUniqueCharUsingMapAndList("communication"));
+		assertEquals('b', FindUnique.firstUniqueCharUsingMapAndList("aab"));
 	}
 
 
