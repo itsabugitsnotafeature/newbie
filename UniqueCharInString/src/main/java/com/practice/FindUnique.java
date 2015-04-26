@@ -114,7 +114,35 @@ public class FindUnique {
 		
 	}
 
-
+	public static char divFirstNonRepeating(String word) {
+		
+		Map<Character,Integer> mapOfUniqueCharacters = new HashMap<Character,Integer>();
+		
+		for (int index =0;index<word.length();index++){
+			char c = word.charAt(index);
+			if(mapOfUniqueCharacters.containsKey(c)){
+				mapOfUniqueCharacters.remove(c);
+			}else{
+				mapOfUniqueCharacters.put(c,index );
+			}
+		}
+		
+		int minIndex = Integer.MAX_VALUE;
+		Character res = null;
+		
+		for(Entry<Character,Integer> entry: mapOfUniqueCharacters.entrySet()){
+			if(entry.getValue() < minIndex){
+				minIndex = entry.getValue();
+				res = entry.getKey();
+			}
+		}
+		
+		System.out.println("Unique Character : "+res+" found at index: "+minIndex);
+		
+		return res;
+		
+		
+	}
 	
 
 

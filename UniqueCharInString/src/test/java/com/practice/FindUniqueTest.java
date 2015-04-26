@@ -14,6 +14,21 @@ import com.practice.FindUnique;;
 public class FindUniqueTest extends TestCase {
 	
 	@Test
+	public void testDivFirstUniqueCharUsingTwoMaps() {
+//		divFirstNonRepeating
+		assertEquals('b', FindUnique.divFirstNonRepeating("abcdefghija")); 
+		assertEquals('h', FindUnique.divFirstNonRepeating("hello")); 
+		assertEquals('J', FindUnique.divFirstNonRepeating("Java")); 
+		assertEquals('i', FindUnique.divFirstNonRepeating("simplest"));
+		assertEquals('c', FindUnique.divFirstNonRepeating("compression"));
+		assertEquals('u', FindUnique.divFirstNonRepeating("communication"));
+		assertEquals('b', FindUnique.divFirstNonRepeating("aab"));
+		assertEquals('b', FindUnique.divFirstNonRepeating("aabacaaaa"));
+	}
+	
+	
+	
+	@Test
 	public void testFindLeastRepeatingCharacter() {
 		assertEquals("ab",FindUnique.findLeastRepeatingCharacter("aabbccc"));
 		assertEquals("ad",FindUnique.findLeastRepeatingCharacter("abbbcccd"));
