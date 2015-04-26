@@ -1,11 +1,26 @@
 package com.practice;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 import org.junit.Ignore;
 import org.junit.Test;
+
 import junit.framework.TestCase;
+
 import com.practice.FindUnique;;
 
 public class FindUniqueTest extends TestCase {
+	
+	@Test
+	public void testFindLeastRepeatingCharacter() {
+		assertEquals("ab",FindUnique.findLeastRepeatingCharacter("aabbccc"));
+		assertEquals("ad",FindUnique.findLeastRepeatingCharacter("abbbcccd"));
+		assertEquals("bdfg",FindUnique.findLeastRepeatingCharacter("aaaaabbcccddeeeeeeffgghhh"));
+		
+	}
+	
 
 	@Test
 	public void testFirstUniqueCharUsingTwoMaps() {
@@ -16,6 +31,7 @@ public class FindUniqueTest extends TestCase {
 		assertEquals('c', FindUnique.firstUniqueCharUsingMapAndList("compression"));
 		assertEquals('u', FindUnique.firstUniqueCharUsingMapAndList("communication"));
 		assertEquals('b', FindUnique.firstUniqueCharUsingMapAndList("aab"));
+		assertEquals('b', FindUnique.firstUniqueCharUsingMapAndList("aabacaaaa"));
 	}
 
 
