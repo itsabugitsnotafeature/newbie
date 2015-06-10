@@ -8,24 +8,28 @@ targetMonthChar = ''
 
 def main():
     global targetMonthChar
-    ermaVisits = getErmaVisits()
+    ermaVisits = getErmaVisits( WhemAmIDueProperties.targetMonthNum )
 
     if ( getExpectedMonthChar() == targetMonthChar ):
         print ermaVisits
 
     else :
         print "Num to target month mismatch. Lucky that I'm smart enough to compensate."
+        newTargetMonthNum = WhemAmIDueProperties.targetMonthNum + 1
+        while ( getExpectedMonthChar() != targetMonthChar ):
+            ermaVisits = getErmaVisits(newTargetMonthNum)
+            newTargetMonthNum +=1
+        print ermaVisits
 
 
-
-def getErmaVisits():
+def getErmaVisits(thisTargetMonthNum):
     global targetMonthChar
 
     #
     # ToDo : Only good for monolithicly increasing months in a Single Year :: Needs more logic
     #
     totalDelta = WhemAmIDueProperties.eachDelta * \
-                 ( WhemAmIDueProperties.targetMonthNum -
+                 ( thisTargetMonthNum -
                    WhemAmIDueProperties.startMonth
                    )
 

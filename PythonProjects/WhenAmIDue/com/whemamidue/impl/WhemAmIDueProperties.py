@@ -13,7 +13,8 @@ tStartDate   = 28
 tStartMonth  = 5
 tStartYear   = 2015
 
-targetMonthNum = 10
+targetMonthNum = 12
+targetYearNum = 2015
 
 resultRegExpString = 'Result: ([A-Z])\w+, ([A-Z])\w+ ([0-9])*'
 resultDateRegExpString = '([A-Z])\w+, ([A-Z])\w+ ([0-9])*'
