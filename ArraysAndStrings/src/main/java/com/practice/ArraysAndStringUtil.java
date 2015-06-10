@@ -8,8 +8,8 @@ import java.util.Map.Entry;
 public class ArraysAndStringUtil {
 	
 	public static String compressByMe ( String str ) {
-//		if ( calculateCompressionSize(str) > str.length())
-//			return "";
+		if ( str.length() == 0 )
+			return "";
 		
 		HashMap<Character, Integer> scoreboard = new HashMap<Character, Integer>();
 		StringBuffer output = new StringBuffer();
