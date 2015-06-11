@@ -1,3 +1,5 @@
+import sys
+
 __author__ = 'ununoctium'
 
 import requests
@@ -10,13 +12,13 @@ def main():
     global targetMonthChar
     ermaVisits = getErmaVisits( WhemAmIDueProperties.targetMonthNum )
 
-    if ( getExpectedMonthChar() == targetMonthChar ):
+    if ( getExpectedMonthChar(WhemAmIDueProperties.targetMonthNum) == targetMonthChar ):
         print ermaVisits
 
     else :
-        print "Num to target month mismatch. Lucky that I'm smart enough to compensate."
+        # print "Num to target month mismatch. Lucky that I'm smart enough to compensate."
         newTargetMonthNum = WhemAmIDueProperties.targetMonthNum + 1
-        while ( getExpectedMonthChar() != targetMonthChar ):
+        while ( getExpectedMonthChar(WhemAmIDueProperties.targetMonthNum) != targetMonthChar ):
             ermaVisits = getErmaVisits(newTargetMonthNum)
             newTargetMonthNum +=1
         print ermaVisits
@@ -25,13 +27,33 @@ def main():
 def getErmaVisits(thisTargetMonthNum):
     global targetMonthChar
 
+    if ( thisTargetMonthNum <= WhemAmIDueProperties.startMonth
+         and WhemAmIDueProperties.targetYearNum == 2015
+         ):
+        print "Can't go before the month of " + \
+              getExpectedMonthChar(thisTargetMonthNum) + ". \nBreaks " \
+              "my <3logic<3 to say this Princess. \nSorry ! "
+        sys.exit()
+
     #
     # ToDo : Only good for monolithicly increasing months in a Single Year :: Needs more logic
     #
-    totalDelta = WhemAmIDueProperties.eachDelta * \
+    if ( WhemAmIDueProperties.targetYearNum == 2015 ):
+        totalDelta = WhemAmIDueProperties.eachDelta * \
                  ( thisTargetMonthNum -
                    WhemAmIDueProperties.startMonth
                    )
+    else:
+        multiplier = WhemAmIDueProperties.targetYearNum - WhemAmIDueProperties.startMonth
+        totalDelta = WhemAmIDueProperties.eachDelta * \
+                 ( ( 12 * multiplier ) +
+                   thisTargetMonthNum - WhemAmIDueProperties.startMonth
+                 ) + 2
+
+    # totalDelta = WhemAmIDueProperties.eachDelta * \
+    #              ( thisTargetMonthNum -
+    #                WhemAmIDueProperties.startMonth
+    #                )
 
     getUrl = constructGetUrl(WhemAmIDueProperties.startMonth,
                              WhemAmIDueProperties.startDate,
@@ -54,7 +76,7 @@ def getErmaVisits(thisTargetMonthNum):
     nextTargetMonth = re.search(WhemAmIDueProperties.monthReExpString, nextTargetDate).group(0)
 
     if (targetMonthChar == nextTargetMonth):
-        resultString = "\n** Wow ! Its your lucky month. Aunt Erma is visiting you twice this month. *"
+        # resultString = "\n** Wow ! Its your lucky month. Aunt Erma is visiting you twice this month. *"
 
         resultString += "\nFirst visit is day AFTER : " + str(targetDate)
         resultString += "\nSecond visit is day AFTER : " + str(nextTargetDate)
@@ -83,7 +105,7 @@ def makeGetCall(getUrl):
     return r.content
 
 
-def getExpectedMonthChar():
+def getExpectedMonthChar(thisMonthNum):
     options = {
         1: "January",
         2: "February",
@@ -98,10 +120,10 @@ def getExpectedMonthChar():
         11: "November",
         12: "December"
     }
-    return options[WhemAmIDueProperties.targetMonthNum]
+    return options[thisMonthNum]
 
 
-def getMonthNum(thisMonth):
+def getMonthNum(thisMonthChar):
     options = {
         "January": 1,
         "February": 2,
@@ -116,7 +138,7 @@ def getMonthNum(thisMonth):
         "November": 11,
         "December": 12
     }
-    return options[thisMonth]
+    return options[thisMonthChar]
 
 
 if __name__ == '__main__':
