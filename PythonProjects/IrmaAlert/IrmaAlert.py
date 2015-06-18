@@ -19,23 +19,23 @@ def main():
     IrmaAlertUtils.setup()
     IrmaAlertUtils.setEmailScannerFlag()
     # For Debug only
-    IrmaAlertUtils.startService()
+    # IrmaAlertUtils.startService()
 
-    # while (  IrmaAlertUtils.isEmailScannerEnabled() ) :
-    #     if not iteration == 0:
-    #         logging.debug('Iteration complete. Hibernate for ' + str( IrmaAlertUtils.getSleepTimeInterval() ) + ' seconds.')
-    #         IrmaAlertUtils.addSleep( IrmaAlertUtils.getSleepTimeInterval() )
-    #
-    #     logging.debug('Starting program.')
-    #     logging.debug('Iteration #' + str(iteration) )
-    #     IrmaAlertUtils.getGmailViaImap()
-    #
-    #     if IrmaAlertUtils.getServiceFlagStatus():
-    #         IrmaAlertUtils.startService()
-    #     else:
-    #         logging.debug("No trigger received thus far.")
-    #
-    #     iteration +=1
+    while (  IrmaAlertUtils.isEmailScannerEnabled() ) :
+        if not iteration == 0:
+            logging.debug('Iteration complete. Hibernate for ' + str( IrmaAlertUtils.getSleepTimeInterval() ) + ' seconds.')
+            IrmaAlertUtils.addSleep( IrmaAlertUtils.getSleepTimeInterval() )
+
+        logging.debug('Starting program.')
+        logging.debug('Iteration #' + str(iteration) )
+        IrmaAlertUtils.getGmailViaImap()
+
+        if IrmaAlertUtils.getServiceFlagStatus():
+            IrmaAlertUtils.startService()
+        else:
+            logging.debug("No trigger received thus far.")
+
+        iteration +=1
 
     logging.debug('Goodbye Master !! \n'
                   '**** Terminating program ****')
