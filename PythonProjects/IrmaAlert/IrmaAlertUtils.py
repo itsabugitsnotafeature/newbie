@@ -23,12 +23,53 @@ from email.mime.multipart import MIMEMultipart
 receivedMonthChar = ''
 daysSinceFirstFlow = ''
 
+queryMonthNum = ''
+queryYearNum = ''
+
 '''
 Mail Parameters
 '''
 pop_conn = poplib.POP3_SSL('pop.gmail.com')
 pop_conn.user('recent:'+IrmaAlertProperties.gmail_user)
 pop_conn.pass_(IrmaAlertProperties.gmail_pwd)
+
+
+
+'''
+Getter for queryMonthNum
+'''
+def getQueryMonthNum():
+    global queryMonthNum
+    return queryMonthNum
+
+
+'''
+Setter for queryMonthNum
+'''
+def setQueryMonthNum(thisMonth):
+    global queryMonthNum
+    queryMonthNum = thisMonth
+    logging.debug("Successfylly set query MONTH to Integer Value :" + str(thisMonth) )
+    return
+
+
+'''
+Setter for queryYearNum
+'''
+def setQueryYearNum(thisYear):
+    global queryYearNum
+    queryYearNum = thisYear
+    logging.debug("Successfylly set query YEAR to Integer Value :" + str(thisYear) )
+    return
+
+
+
+'''
+Getter  for queryYearNum
+'''
+def getQueryYearNum():
+    global queryYearNum
+    return queryYearNum
 
 
 
@@ -64,6 +105,8 @@ Variables : Initializing Logger, Working Directory, Base Directory, emailCounter
 '''
 def setup():
     global daysSinceFirstFlow
+    global queryMonthNum
+    global queryYearNum
 
 
     setupLogger();
@@ -78,8 +121,13 @@ def setup():
     if not os.path.exists(IrmaAlertProperties.destinationDirectory):
         os.makedirs(IrmaAlertProperties.destinationDirectory)
 
-    logging.debug('Done with setup().')
+
+    queryMonthNum = IrmaAlertProperties.targetMonthNum
+    queryYearNum = IrmaAlertProperties.targetYearNum
     daysSinceFirstFlow = getDaysSinceFirstFlow()
+
+    logging.debug('Done with setup().')
+
 
 
 
@@ -133,17 +181,15 @@ def saveMessage(message):
     baseEmailFileNameFileName = os.path.join(IrmaAlertProperties.destinationDirectory, emailSubject[:14])
     eachFileName = baseEmailFileNameFileName + str(IrmaAlertProperties.emailCounter) + ".txt"
 
-    if IrmaAlertProperties.activateServiceString in emailSubject:
-        logging.debug(' ++ Trigger for Service activation received successfully. ++ ')
-        setTriggerServiceFlag()
 
 
 
-
+    # Trigger to Terminate Scanner
     if IrmaAlertProperties.terminateScannerString in emailSubject:
         logging.debug(' ### TERMINATE SCANNER CODE RECEIVED #### ')
         resetEmailScannerFlag()
         logging.debug('Termination flag set to: ' + str(IrmaAlertProperties.enableScannerFlag) )
+
 
     ## Save Email in file
     messageFile = open(eachFileName, 'wb')
@@ -155,6 +201,26 @@ def saveMessage(message):
     logging.debug('Looking for attachments.')
 
     for part in message.walk():
+
+        if part.get_content_type() == 'text/plain':
+            logging.debug( "Saving body content." )
+            emailBodyContent = part.get_payload()
+
+            # Trigger to start service : Email Subject contains know string
+            if IrmaAlertProperties.activateServiceString in emailSubject:
+                logging.debug(' ++ Trigger for Service activation received successfully. ++ ')
+
+                extractedMonth = re.search(IrmaAlertProperties.monthRegExString, emailBodyContent,re.IGNORECASE).group(0)
+                logging.debug("Extracted Month : " + extractedMonth)
+                setQueryMonthNum( getMonthNum(extractedMonth) )
+
+                extractedYear = re.search(IrmaAlertProperties.yearRegExString, emailBodyContent).group(0)
+                logging.debug("Extracted Month : " + extractedMonth)
+                setQueryYearNum( int(extractedYear) )
+                setTriggerServiceFlag()
+
+
+
         if part.get('Content-Disposition') is None:
             logging.debug('No attachments found.')
             continue
@@ -178,6 +244,8 @@ def saveMessage(message):
             fp.write(part.get_payload(decode=True))
         logging.debug('Done saving attachment.')
     logging.debug('Done saving message !')
+
+
 
 
 
@@ -421,8 +489,9 @@ Aunt Irma's visit.
 def validateResults(resultString):
     global receivedMonthChar
     global daysSinceFirstFlow
+    global queryMonthNum
 
-    if ( getExpectedMonthChar(IrmaAlertProperties.targetMonthNum) == receivedMonthChar ):
+    if ( getExpectedMonthChar(queryMonthNum) == receivedMonthChar ):
         logging.debug("ValidateResult: Correct result obtained")
         return resultString
 
@@ -430,7 +499,7 @@ def validateResults(resultString):
         logging.debug("\n ***** ValidateResult: Error correcting results. ***** ")
 
 
-        while ( getExpectedMonthChar(IrmaAlertProperties.targetMonthNum) != receivedMonthChar ):
+        while ( getExpectedMonthChar(queryMonthNum) != receivedMonthChar ):
             logging.debug("ValidateResult: Result for revised daysSinceFirstFlow ["+ str(daysSinceFirstFlow) +"] is =>" + resultString)
             daysSinceFirstFlow +=IrmaAlertProperties.diffBetweenEachVisit
             resultString = getIrmaVisits(daysSinceFirstFlow)
@@ -440,27 +509,28 @@ def validateResults(resultString):
 
 def getDaysSinceFirstFlow():
     MONTHS_PER_YEAR = 12
+    global queryYearNum
 
     if (not checkValidRequesst()):
         logging.error("Killing Program !")
         sys.exit()
 
-    if ( IrmaAlertProperties.targetYearNum== 2015 ):
+    if ( queryYearNum == 2015 ):
         daysSinceFirstFlow = IrmaAlertProperties.diffBetweenEachVisit * \
-                 ( IrmaAlertProperties.targetMonthNum -
+                 ( queryMonthNum -
                    IrmaAlertProperties.firstStartMonth
                    )
         logging.info('Total delta calculated [Year 2015]: ' + str(daysSinceFirstFlow) )
 
     else:
-        multiplier = IrmaAlertProperties.targetYearNum - IrmaAlertProperties.firstStartYear
+        multiplier = queryYearNum - IrmaAlertProperties.firstStartYear
 
         daysSinceFirstFlow = (
             IrmaAlertProperties.diffBetweenEachVisit * \
                 (
                     ( MONTHS_PER_YEAR * multiplier ) +
                         (
-                            IrmaAlertProperties.targetMonthNum -
+                            queryMonthNum -
                             IrmaAlertProperties.firstStartMonth + 1
                         )
                 )
@@ -471,21 +541,28 @@ def getDaysSinceFirstFlow():
 
 
 def checkValidRequesst():
-        if ( IrmaAlertProperties.targetMonthNum <= IrmaAlertProperties.firstStartMonth
-         and IrmaAlertProperties.targetYearNum == 2015
-         ):
-            logging.error(' Cant go before the month of ' + \
-              getExpectedMonthChar(IrmaAlertProperties.targetMonthNum) + '. \nBreaks ' \
-              'my <3logic<3 to say this Princess. \nSorry ! ')
-            return False
+    global queryMonthNum
+    global queryYearNum
 
-        logging.debug("Request found to be Valid. Good Boy !")
-        return True
+
+    if ( queryMonthNum <= IrmaAlertProperties.firstStartMonth
+         and queryYearNum == 2015
+         ):
+        logging.error(' Cant go before the month of ' + \
+              getExpectedMonthChar(queryMonthNum) + '. \nBreaks ' \
+              'my <3logic<3 to say this Princess. \nSorry ! ')
+        status = False
+
+    logging.debug("Request found to be Valid. Good Boy !")
+    status = True
+
+    return status
 
 
 
 def getIrmaVisits(daysSinceFirstFlow):
     global receivedMonthChar
+    global queryYearNum
 
     getUrl = constructGetUrl(IrmaAlertProperties.firstStartMonth,
                              IrmaAlertProperties.firstStartDate,
@@ -504,19 +581,19 @@ def getIrmaVisits(daysSinceFirstFlow):
     getCallReply = makeGetCall(getUrl)
     receivedDate = re.search(IrmaAlertProperties.resultRegExpString, getCallReply).group(0)
     receivedDate = re.search(IrmaAlertProperties.resultDateRegExpString, receivedDate).group(0)
-    receivedMonthChar = re.search(IrmaAlertProperties.monthReExpString, receivedDate).group(0)
+    receivedMonthChar = re.search(IrmaAlertProperties.monthRegExString, receivedDate,re.IGNORECASE).group(0)
 
     getCallReply = makeGetCall(getNextUrl)
     nextReceivedDate = re.search(IrmaAlertProperties.resultRegExpString, getCallReply).group(0)
     nextReceivedDate = re.search(IrmaAlertProperties.resultDateRegExpString, nextReceivedDate).group(0)
-    nextReceivedMonthChar = re.search(IrmaAlertProperties.monthReExpString, nextReceivedDate).group(0)
+    nextReceivedMonthChar = re.search(IrmaAlertProperties.monthRegExString, nextReceivedDate,re.IGNORECASE).group(0)
 
     if (receivedMonthChar == nextReceivedMonthChar):
-        resultString = "\nFirst visit is day AFTER : " + str(receivedDate) + " " + str(IrmaAlertProperties.targetYearNum)
-        resultString += "\nSecond visit is day AFTER : " + str(nextReceivedDate) + " " + str(IrmaAlertProperties.targetYearNum)
+        resultString = "\nFirst visit is day AFTER : " + str(receivedDate) + " " + str(queryYearNum)
+        resultString += "\nSecond visit is day AFTER : " + str(nextReceivedDate) + " " + str(queryYearNum)
 
     else:
-        resultString = "Aunt Irma visiting day AFTER : " + str(receivedDate) + " " + str(IrmaAlertProperties.targetYearNum)
+        resultString = "Aunt Irma visiting day AFTER : " + str(receivedDate) + " " + str(queryYearNum)
 
     resultString = validateResults(resultString)
     logging.info("Returning Result : "+ resultString)
@@ -575,8 +652,39 @@ def getExpectedMonthChar(thisMonthNum):
 
 '''
 def getMonthNum(thisMonthChar):
+
+    # if "jan" in thisMonthChar:
+    if thisMonthChar.lower().__contains__("jan"):
+        monthId = 1
+    if thisMonthChar.lower().__contains__("feb"):
+        monthId = 2
+    if thisMonthChar.lower().__contains__("mar"):
+        monthId = 3
+    if thisMonthChar.lower().__contains__("apr"):
+        monthId = 4
+    if thisMonthChar.lower().__contains__("may"):
+        monthId = 5
+    if thisMonthChar.lower().__contains__("jun"):
+        monthId = 6
+    if thisMonthChar.lower().__contains__("jul"):
+        monthId = 7
+    if thisMonthChar.lower().__contains__("aug"):
+        monthId = 8
+    if thisMonthChar.lower().__contains__("sep"):
+        monthId = 9
+    if thisMonthChar.lower().__contains__("oct"):
+        monthId = 0
+    if thisMonthChar.lower().__contains__("nov"):
+        monthId = 11
+    if thisMonthChar.lower().__contains__("dec"):
+        monthId = 12
+
+    return monthId
+
+
+    '''
     options = {
-        "January": 1,
+        "January" : 1,
         "February": 2,
         "March": 3,
         "April": 4,
@@ -590,6 +698,7 @@ def getMonthNum(thisMonthChar):
         "December": 12
     }
     return options[thisMonthChar]
+    '''
 
 
 
