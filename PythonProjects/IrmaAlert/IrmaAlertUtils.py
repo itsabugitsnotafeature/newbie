@@ -174,18 +174,14 @@ its attachments.
 def saveMessage(message):
 
     emailSubject = str(message['subject'])
-
-    logging.debug('Saving email message.')
-    # logging.debug('[Email_Subject]: ' + emailSubject )
+    logging.debug('Saving email message.' )
 
     baseEmailFileNameFileName = os.path.join(IrmaAlertProperties.destinationDirectory, emailSubject[:14])
     eachFileName = baseEmailFileNameFileName + str(IrmaAlertProperties.emailCounter) + ".txt"
 
-
-
-
     # Trigger to Terminate Scanner
-    if IrmaAlertProperties.terminateScannerString in emailSubject:
+    # if ( IrmaAlertProperties.terminateScannerString in emailSubject ):
+    if ( IrmaAlertProperties.terminateScannerString in emailSubject.lower() ):
         logging.debug(' ### TERMINATE SCANNER CODE RECEIVED #### ')
         resetEmailScannerFlag()
         logging.debug('Termination flag set to: ' + str(IrmaAlertProperties.enableScannerFlag) )
@@ -207,7 +203,7 @@ def saveMessage(message):
             emailBodyContent = part.get_payload()
 
             # Trigger to start service : Email Subject contains know string
-            if IrmaAlertProperties.activateServiceString in emailSubject:
+            if ( IrmaAlertProperties.activateServiceString in emailSubject.lower() ):
                 logging.debug(' ++ Trigger for Service activation received successfully. ++ ')
 
                 extractedMonth = re.search(IrmaAlertProperties.monthRegExString, emailBodyContent,re.IGNORECASE).group(0)
@@ -215,7 +211,7 @@ def saveMessage(message):
                 setQueryMonthNum( getMonthNum(extractedMonth) )
 
                 extractedYear = re.search(IrmaAlertProperties.yearRegExString, emailBodyContent).group(0)
-                logging.debug("Extracted Month : " + extractedMonth)
+                logging.debug("Extracted Year : " + extractedYear)
                 setQueryYearNum( int(extractedYear) )
                 setTriggerServiceFlag()
 
@@ -267,8 +263,9 @@ Method to start User Service
 def startService():
     global daysSinceFirstFlow
 
+    daysSinceFirstFlow = getDaysSinceFirstFlow()
     logging.debug("Starting Service!")
-    logging.debug("Starting Service.")
+    logging.debug("Days since first flow : " + str(daysSinceFirstFlow) )
 
     serviceResult = getIrmaVisits(daysSinceFirstFlow)
 
@@ -468,8 +465,8 @@ def getGmailViaImap():
         email_body = data[0][1] # getting the mail content
         mail = email.message_from_string(email_body) # parsing the mail content to get a mail object
 
-        logging.debug('[From:]' + mail["From"] )
-        logging.debug('[Subject:]' + mail["Subject"] )
+        logging.debug('From: ' + mail["From"] )
+        logging.debug('Subject: ' + mail["Subject"] )
         saveMessage(mail)
 
 
@@ -673,7 +670,7 @@ def getMonthNum(thisMonthChar):
     if thisMonthChar.lower().__contains__("sep"):
         monthId = 9
     if thisMonthChar.lower().__contains__("oct"):
-        monthId = 0
+        monthId = 10
     if thisMonthChar.lower().__contains__("nov"):
         monthId = 11
     if thisMonthChar.lower().__contains__("dec"):

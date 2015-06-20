@@ -18,22 +18,22 @@ commandTimeOut = 1000
 triggerServiceFlag = False
 
 enableScannerFlag = False
-activateServiceString = 'riddle-me-this!'
-terminateScannerString = 'bhai-tu-bass-kar'
+activateServiceString = 'riddle'
+terminateScannerString = 'disastrope'
 
 commandToExecute = "mvn --version "
 commandConsoleLog = ''
 
-# kkkk - ho gaya
+
 '''
 Mail Parameters
 '''
 #Credentials_Incoming
-gmail_user='<user>'
-gmail_pwd='<pass>'
+gmail_user=''
+gmail_pwd=''
 
 #Credentials_Outgoing
-outgoing_user='<user>@gmail.com'
+outgoing_user='@gmail.com'
 
 pop_conn = poplib.POP3_SSL('pop.gmail.com')
 pop_conn.user('recent:'+gmail_user)
@@ -58,8 +58,8 @@ firstStartDate   = 28
 firstStartMonth  = 5
 firstStartYear   = 2015
 
-targetMonthNum = 9
-targetYearNum = 2022
+targetMonthNum = 6
+targetYearNum = 2015
 
 resultRegExpString = 'Result: ([A-Z])\w+, ([A-Z])\w+ ([0-9])*'
 resultDateRegExpString = '([A-Z])\w+, ([A-Z])\w+ ([0-9])*'

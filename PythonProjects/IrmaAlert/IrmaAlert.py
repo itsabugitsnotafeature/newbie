@@ -22,10 +22,21 @@ NOTE :
 
             From that point on, all reports are 1 day delayed until a similar
             event happens.
+        2. Emails with UPPER CASE subject lines are not being marked as read once mail is downloaded.
+
 
     Needed Features :
-        1.
+        1. Extract senders email address.
+        2. Smart text in reply.
+        3. Better Trigger string.
+        4. Better termination string.
+        5. default value for daysSinceFirstFlow should be days to current month.
+        6. Reply if parameter unreadable
+        7. Initialize defaults for all property files
+        8. scale to other business partners
+
 '''
+
 def main():
 
     iteration = 0
