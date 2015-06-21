@@ -1,230 +1,235 @@
-2015-06-21 15:46:46,359:DEBUG:Logger setup successful.
-2015-06-21 15:46:46,359:DEBUG:Initializing working directory and other environment varaibles.
-2015-06-21 15:46:46,360:DEBUG:Request found to be Valid. 
+2015-06-21 16:29:33,311:DEBUG:Logger setup successful.
+2015-06-21 16:29:33,311:DEBUG:Initializing working directory and other environment varaibles.
+2015-06-21 16:29:33,311:DEBUG:Request found to be Valid. 
 Good Girl !
-2015-06-21 15:46:46,360:INFO:Total delta calculated [Year 2015]: 26
-2015-06-21 15:46:46,360:DEBUG:Queen Bee Email Address saved. Value :whenisirmavisiting@gmail.com
-2015-06-21 15:46:46,360:DEBUG:Done with setup().
-2015-06-21 15:46:46,360:DEBUG:Email Scanner flag ENABLED. 
-2015-06-21 15:46:46,360:DEBUG:Starting program.
-2015-06-21 15:46:46,360:DEBUG:Iteration #0
-2015-06-21 15:46:46,361:DEBUG:Fetching messages from gmail inbox.
-2015-06-21 15:46:46,832:DEBUG:Logging in.
-2015-06-21 15:46:47,625:DEBUG:Mail downloaded, seperating unseen messages.
-2015-06-21 15:46:47,836:DEBUG:* No New Messages : Returning to caller ! *
-2015-06-21 15:46:47,836:DEBUG:No trigger received thus far.
-2015-06-21 15:46:47,836:DEBUG:Iteration complete. Hibernate for 10 seconds.
-2015-06-21 15:46:57,832:DEBUG:Starting program.
-2015-06-21 15:46:57,832:DEBUG:Iteration #1
-2015-06-21 15:46:57,832:DEBUG:Fetching messages from gmail inbox.
-2015-06-21 15:46:58,128:DEBUG:Logging in.
-2015-06-21 15:46:59,584:DEBUG:Mail downloaded, seperating unseen messages.
-2015-06-21 15:46:59,813:DEBUG:* No New Messages : Returning to caller ! *
-2015-06-21 15:46:59,813:DEBUG:No trigger received thus far.
-2015-06-21 15:46:59,813:DEBUG:Iteration complete. Hibernate for 10 seconds.
-2015-06-21 15:47:09,810:DEBUG:Starting program.
-2015-06-21 15:47:09,810:DEBUG:Iteration #2
-2015-06-21 15:47:09,811:DEBUG:Fetching messages from gmail inbox.
-2015-06-21 15:47:10,135:DEBUG:Logging in.
-2015-06-21 15:47:10,819:DEBUG:Mail downloaded, seperating unseen messages.
-2015-06-21 15:47:11,032:DEBUG:New Unseen messages detected.
-2015-06-21 15:47:11,033:DEBUG:Saving one email with following credentials.
-2015-06-21 15:47:11,422:DEBUG:From: itsabug itsnotafeature <itsabugitsnotafeature@gmail.com>
-2015-06-21 15:47:11,423:DEBUG:Queen Bee Email Address saved. Value :itsabugitsnotafeature@gmail.com
-2015-06-21 15:47:11,423:DEBUG:Subject: riddles are full of riddles
-2015-06-21 15:47:11,424:DEBUG:Saving email message.
-2015-06-21 15:47:11,428:DEBUG:Incrementing global email counter
-2015-06-21 15:47:11,428:DEBUG:New Value:1
-2015-06-21 15:47:11,429:DEBUG:Email saved.
-2015-06-21 15:47:11,429:DEBUG:Looking for attachments.
-2015-06-21 15:47:11,429:DEBUG:Saving body content.
-2015-06-21 15:47:11,429:DEBUG: ++ Trigger for Service activation received successfully. ++ 
-2015-06-21 15:47:11,430:DEBUG:Extracted Month : may
-2015-06-21 15:47:11,430:DEBUG:Successfylly set query MONTH to Integer Value :5
-2015-06-21 15:47:11,431:DEBUG:Extracted Year : 2020
-2015-06-21 15:47:11,431:DEBUG:Successfylly set query YEAR to Integer Value :2020
-2015-06-21 15:47:11,431:DEBUG:Service trigger flag ENABLED. 
-2015-06-21 15:47:11,431:DEBUG:No attachments found.
-2015-06-21 15:47:11,431:DEBUG:Done saving message !
-2015-06-21 15:47:11,431:DEBUG:Request found to be Valid. 
+2015-06-21 16:29:33,311:INFO:Total delta calculated [Year 2015]: 26
+2015-06-21 16:29:33,311:DEBUG:Queen Bee Email Address saved. Value :whenisirmavisiting@gmail.com
+2015-06-21 16:29:33,312:DEBUG:Done with setup().
+2015-06-21 16:29:33,312:DEBUG:Email Scanner flag ENABLED. 
+2015-06-21 16:29:33,312:DEBUG:Starting program.
+2015-06-21 16:29:33,312:DEBUG:Iteration #0
+2015-06-21 16:29:33,312:DEBUG:Fetching messages from gmail inbox.
+2015-06-21 16:29:33,724:DEBUG:Logging in.
+2015-06-21 16:29:34,881:DEBUG:Mail downloaded, seperating unseen messages.
+2015-06-21 16:29:35,077:DEBUG:* No New Messages : Returning to caller ! *
+2015-06-21 16:29:35,077:DEBUG:No trigger received thus far.
+2015-06-21 16:29:35,077:DEBUG:Iteration complete. Hibernate for 10 seconds.
+2015-06-21 16:29:45,074:DEBUG:Starting program.
+2015-06-21 16:29:45,074:DEBUG:Iteration #1
+2015-06-21 16:29:45,074:DEBUG:Fetching messages from gmail inbox.
+2015-06-21 16:29:45,384:DEBUG:Logging in.
+2015-06-21 16:29:46,041:DEBUG:Mail downloaded, seperating unseen messages.
+2015-06-21 16:29:46,265:DEBUG:New Unseen messages detected.
+2015-06-21 16:29:46,265:DEBUG:Saving one email with following credentials.
+2015-06-21 16:29:46,646:DEBUG:From: itsabug itsnotafeature <itsabugitsnotafeature@gmail.com>
+2015-06-21 16:29:46,646:DEBUG:Queen Bee Email Address saved. Value :itsabugitsnotafeature@gmail.com
+2015-06-21 16:29:46,646:DEBUG:Subject: life of riddles
+2015-06-21 16:29:46,646:DEBUG:Saving email message.
+2015-06-21 16:29:46,650:DEBUG:Incrementing global email counter
+2015-06-21 16:29:46,650:DEBUG:New Value:1
+2015-06-21 16:29:46,650:DEBUG:Email saved.
+2015-06-21 16:29:46,650:DEBUG:Looking for attachments.
+2015-06-21 16:29:46,650:DEBUG:Saving body content.
+2015-06-21 16:29:46,650:DEBUG: ++ Trigger for Service activation received successfully. ++ 
+2015-06-21 16:29:46,652:DEBUG:Extracted Month : march
+2015-06-21 16:29:46,652:DEBUG:Successfylly set query MONTH to Integer Value :3
+2015-06-21 16:29:46,652:DEBUG:Extracted Year : 2016
+2015-06-21 16:29:46,652:DEBUG:Successfylly set query YEAR to Integer Value :2016
+2015-06-21 16:29:46,652:DEBUG:Service trigger flag ENABLED. 
+2015-06-21 16:29:46,653:DEBUG:No attachments found.
+2015-06-21 16:29:46,653:DEBUG:Done saving message !
+2015-06-21 16:29:46,653:DEBUG:Request found to be Valid. 
 Good Girl !
-2015-06-21 15:47:11,431:DEBUG:Starting Service!
-2015-06-21 15:47:11,432:DEBUG:Days since first flow : 1586
-2015-06-21 15:47:11,432:INFO:getURL Value: http://www.timeanddate.com/date/dateadded.html?m1=5&d1=28&y1=2015&type=add&ay=&am=&aw=&ad=1586
-2015-06-21 15:47:11,432:INFO:getNextUrl Value: http://www.timeanddate.com/date/dateadded.html?m1=5&d1=28&y1=2015&type=add&ay=&am=&aw=&ad=1612
-2015-06-21 15:47:11,525:INFO:Starting new HTTP connection (1): www.timeanddate.com
-2015-06-21 15:47:12,175:DEBUG:"GET /date/dateadded.html?m1=5&d1=28&y1=2015&type=add&ay=&am=&aw=&ad=1586 HTTP/1.1" 200 5159
-2015-06-21 15:47:12,183:INFO:Starting new HTTP connection (1): www.timeanddate.com
-2015-06-21 15:47:12,355:DEBUG:"GET /date/dateadded.html?m1=5&d1=28&y1=2015&type=add&ay=&am=&aw=&ad=1612 HTTP/1.1" 200 5158
-2015-06-21 15:47:12,361:DEBUG:
- ***** ValidateResult: Error correcting results. ***** 
-2015-06-21 15:47:12,361:DEBUG:ValidateResult: Result for revised daysSinceFirstFlow [1586] is =>Bae, 
+2015-06-21 16:29:46,653:DEBUG:Starting Service!
+2015-06-21 16:29:46,653:DEBUG:Days since first flow : 286
+2015-06-21 16:29:46,653:INFO:getURL Value: http://www.timeanddate.com/date/dateadded.html?m1=5&d1=28&y1=2015&type=add&ay=&am=&aw=&ad=286
+2015-06-21 16:29:46,654:INFO:getNextUrl Value: http://www.timeanddate.com/date/dateadded.html?m1=5&d1=28&y1=2015&type=add&ay=&am=&aw=&ad=312
+2015-06-21 16:29:46,755:INFO:Starting new HTTP connection (1): www.timeanddate.com
+2015-06-21 16:29:47,402:DEBUG:"GET /date/dateadded.html?m1=5&d1=28&y1=2015&type=add&ay=&am=&aw=&ad=286 HTTP/1.1" 200 5163
+2015-06-21 16:29:47,411:INFO:Starting new HTTP connection (1): www.timeanddate.com
+2015-06-21 16:29:47,586:DEBUG:"GET /date/dateadded.html?m1=5&d1=28&y1=2015&type=add&ay=&am=&aw=&ad=312 HTTP/1.1" 200 5163
+2015-06-21 16:29:47,588:DEBUG:ValidateResult: Correct result obtained
+2015-06-21 16:29:47,588:INFO:Returning Result : Bae, 
 
-I'll pay you a visit day after Monday, September 30 2020. 
-2015-06-21 15:47:12,361:INFO:getURL Value: http://www.timeanddate.com/date/dateadded.html?m1=5&d1=28&y1=2015&type=add&ay=&am=&aw=&ad=1612
-2015-06-21 15:47:12,361:INFO:getNextUrl Value: http://www.timeanddate.com/date/dateadded.html?m1=5&d1=28&y1=2015&type=add&ay=&am=&aw=&ad=1638
-2015-06-21 15:47:12,363:INFO:Starting new HTTP connection (1): www.timeanddate.com
-2015-06-21 15:47:12,536:DEBUG:"GET /date/dateadded.html?m1=5&d1=28&y1=2015&type=add&ay=&am=&aw=&ad=1612 HTTP/1.1" 200 5158
-2015-06-21 15:47:12,540:INFO:Starting new HTTP connection (1): www.timeanddate.com
-2015-06-21 15:47:12,717:DEBUG:"GET /date/dateadded.html?m1=5&d1=28&y1=2015&type=add&ay=&am=&aw=&ad=1638 HTTP/1.1" 200 5156
-2015-06-21 15:47:12,723:DEBUG:
- ***** ValidateResult: Error correcting results. ***** 
-2015-06-21 15:47:12,723:DEBUG:ValidateResult: Result for revised daysSinceFirstFlow [1612] is =>Bae, 
-
-I'll pay you a visit day after Saturday, October 26 2020. 
-2015-06-21 15:47:12,723:INFO:getURL Value: http://www.timeanddate.com/date/dateadded.html?m1=5&d1=28&y1=2015&type=add&ay=&am=&aw=&ad=1638
-2015-06-21 15:47:12,723:INFO:getNextUrl Value: http://www.timeanddate.com/date/dateadded.html?m1=5&d1=28&y1=2015&type=add&ay=&am=&aw=&ad=1664
-2015-06-21 15:47:12,726:INFO:Starting new HTTP connection (1): www.timeanddate.com
-2015-06-21 15:47:12,898:DEBUG:"GET /date/dateadded.html?m1=5&d1=28&y1=2015&type=add&ay=&am=&aw=&ad=1638 HTTP/1.1" 200 5156
-2015-06-21 15:47:12,909:INFO:Starting new HTTP connection (1): www.timeanddate.com
-2015-06-21 15:47:13,082:DEBUG:"GET /date/dateadded.html?m1=5&d1=28&y1=2015&type=add&ay=&am=&aw=&ad=1664 HTTP/1.1" 200 5158
-2015-06-21 15:47:13,086:DEBUG:
- ***** ValidateResult: Error correcting results. ***** 
-2015-06-21 15:47:13,086:DEBUG:ValidateResult: Result for revised daysSinceFirstFlow [1638] is =>Bae, 
-
-I'll pay you a visit day after Thursday, November 21 2020. 
-2015-06-21 15:47:13,086:INFO:getURL Value: http://www.timeanddate.com/date/dateadded.html?m1=5&d1=28&y1=2015&type=add&ay=&am=&aw=&ad=1664
-2015-06-21 15:47:13,086:INFO:getNextUrl Value: http://www.timeanddate.com/date/dateadded.html?m1=5&d1=28&y1=2015&type=add&ay=&am=&aw=&ad=1690
-2015-06-21 15:47:13,088:INFO:Starting new HTTP connection (1): www.timeanddate.com
-2015-06-21 15:47:13,256:DEBUG:"GET /date/dateadded.html?m1=5&d1=28&y1=2015&type=add&ay=&am=&aw=&ad=1664 HTTP/1.1" 200 5158
-2015-06-21 15:47:13,279:INFO:Starting new HTTP connection (1): www.timeanddate.com
-2015-06-21 15:47:13,452:DEBUG:"GET /date/dateadded.html?m1=5&d1=28&y1=2015&type=add&ay=&am=&aw=&ad=1690 HTTP/1.1" 200 5160
-2015-06-21 15:47:13,455:DEBUG:
- ***** ValidateResult: Error correcting results. ***** 
-2015-06-21 15:47:13,455:DEBUG:ValidateResult: Result for revised daysSinceFirstFlow [1664] is =>Bae, 
-
-I'll pay you a visit day after Tuesday, December 17 2020. 
-2015-06-21 15:47:13,455:INFO:getURL Value: http://www.timeanddate.com/date/dateadded.html?m1=5&d1=28&y1=2015&type=add&ay=&am=&aw=&ad=1690
-2015-06-21 15:47:13,455:INFO:getNextUrl Value: http://www.timeanddate.com/date/dateadded.html?m1=5&d1=28&y1=2015&type=add&ay=&am=&aw=&ad=1716
-2015-06-21 15:47:13,457:INFO:Starting new HTTP connection (1): www.timeanddate.com
-2015-06-21 15:47:13,633:DEBUG:"GET /date/dateadded.html?m1=5&d1=28&y1=2015&type=add&ay=&am=&aw=&ad=1690 HTTP/1.1" 200 5160
-2015-06-21 15:47:13,639:INFO:Starting new HTTP connection (1): www.timeanddate.com
-2015-06-21 15:47:13,815:DEBUG:"GET /date/dateadded.html?m1=5&d1=28&y1=2015&type=add&ay=&am=&aw=&ad=1716 HTTP/1.1" 200 5159
-2015-06-21 15:47:13,833:DEBUG:
- ***** ValidateResult: Error correcting results. ***** 
-2015-06-21 15:47:13,833:DEBUG:ValidateResult: Result for revised daysSinceFirstFlow [1690] is =>Bae, 
-
-I'll pay you a visit day after Sunday, January 12 2020. 
-2015-06-21 15:47:13,833:INFO:getURL Value: http://www.timeanddate.com/date/dateadded.html?m1=5&d1=28&y1=2015&type=add&ay=&am=&aw=&ad=1716
-2015-06-21 15:47:13,833:INFO:getNextUrl Value: http://www.timeanddate.com/date/dateadded.html?m1=5&d1=28&y1=2015&type=add&ay=&am=&aw=&ad=1742
-2015-06-21 15:47:13,837:INFO:Starting new HTTP connection (1): www.timeanddate.com
-2015-06-21 15:47:14,008:DEBUG:"GET /date/dateadded.html?m1=5&d1=28&y1=2015&type=add&ay=&am=&aw=&ad=1716 HTTP/1.1" 200 5159
-2015-06-21 15:47:14,013:INFO:Starting new HTTP connection (1): www.timeanddate.com
-2015-06-21 15:47:14,199:DEBUG:"GET /date/dateadded.html?m1=5&d1=28&y1=2015&type=add&ay=&am=&aw=&ad=1742 HTTP/1.1" 200 5157
-2015-06-21 15:47:14,205:DEBUG:
- ***** ValidateResult: Error correcting results. ***** 
-2015-06-21 15:47:14,205:DEBUG:ValidateResult: Result for revised daysSinceFirstFlow [1716] is =>Bae, 
-
-I'll pay you a visit day after Friday, February 7 2020. 
-2015-06-21 15:47:14,205:INFO:getURL Value: http://www.timeanddate.com/date/dateadded.html?m1=5&d1=28&y1=2015&type=add&ay=&am=&aw=&ad=1742
-2015-06-21 15:47:14,205:INFO:getNextUrl Value: http://www.timeanddate.com/date/dateadded.html?m1=5&d1=28&y1=2015&type=add&ay=&am=&aw=&ad=1768
-2015-06-21 15:47:14,207:INFO:Starting new HTTP connection (1): www.timeanddate.com
-2015-06-21 15:47:14,379:DEBUG:"GET /date/dateadded.html?m1=5&d1=28&y1=2015&type=add&ay=&am=&aw=&ad=1742 HTTP/1.1" 200 5157
-2015-06-21 15:47:14,383:INFO:Starting new HTTP connection (1): www.timeanddate.com
-2015-06-21 15:47:14,563:DEBUG:"GET /date/dateadded.html?m1=5&d1=28&y1=2015&type=add&ay=&am=&aw=&ad=1768 HTTP/1.1" 200 5157
-2015-06-21 15:47:14,568:DEBUG:
- ***** ValidateResult: Error correcting results. ***** 
-2015-06-21 15:47:14,568:DEBUG:ValidateResult: Result for revised daysSinceFirstFlow [1742] is =>
-First visit is day AFTER : Wednesday, March 4 2020
-Second visit is day AFTER : Monday, March 30 2020
-2015-06-21 15:47:14,568:INFO:getURL Value: http://www.timeanddate.com/date/dateadded.html?m1=5&d1=28&y1=2015&type=add&ay=&am=&aw=&ad=1768
-2015-06-21 15:47:14,568:INFO:getNextUrl Value: http://www.timeanddate.com/date/dateadded.html?m1=5&d1=28&y1=2015&type=add&ay=&am=&aw=&ad=1794
-2015-06-21 15:47:14,570:INFO:Starting new HTTP connection (1): www.timeanddate.com
-2015-06-21 15:47:14,742:DEBUG:"GET /date/dateadded.html?m1=5&d1=28&y1=2015&type=add&ay=&am=&aw=&ad=1768 HTTP/1.1" 200 5157
-2015-06-21 15:47:14,749:INFO:Starting new HTTP connection (1): www.timeanddate.com
-2015-06-21 15:47:14,920:DEBUG:"GET /date/dateadded.html?m1=5&d1=28&y1=2015&type=add&ay=&am=&aw=&ad=1794 HTTP/1.1" 200 5160
-2015-06-21 15:47:14,923:DEBUG:
- ***** ValidateResult: Error correcting results. ***** 
-2015-06-21 15:47:14,923:DEBUG:ValidateResult: Result for revised daysSinceFirstFlow [1768] is =>Bae, 
-
-I'll pay you a visit day after Monday, March 30 2020. 
-2015-06-21 15:47:14,923:INFO:getURL Value: http://www.timeanddate.com/date/dateadded.html?m1=5&d1=28&y1=2015&type=add&ay=&am=&aw=&ad=1794
-2015-06-21 15:47:14,923:INFO:getNextUrl Value: http://www.timeanddate.com/date/dateadded.html?m1=5&d1=28&y1=2015&type=add&ay=&am=&aw=&ad=1820
-2015-06-21 15:47:14,925:INFO:Starting new HTTP connection (1): www.timeanddate.com
-2015-06-21 15:47:15,097:DEBUG:"GET /date/dateadded.html?m1=5&d1=28&y1=2015&type=add&ay=&am=&aw=&ad=1794 HTTP/1.1" 200 5160
-2015-06-21 15:47:15,100:INFO:Starting new HTTP connection (1): www.timeanddate.com
-2015-06-21 15:47:15,279:DEBUG:"GET /date/dateadded.html?m1=5&d1=28&y1=2015&type=add&ay=&am=&aw=&ad=1820 HTTP/1.1" 200 5148
-2015-06-21 15:47:15,281:DEBUG:
- ***** ValidateResult: Error correcting results. ***** 
-2015-06-21 15:47:15,282:DEBUG:ValidateResult: Result for revised daysSinceFirstFlow [1794] is =>Bae, 
-
-I'll pay you a visit day after Saturday, April 25 2020. 
-2015-06-21 15:47:15,282:INFO:getURL Value: http://www.timeanddate.com/date/dateadded.html?m1=5&d1=28&y1=2015&type=add&ay=&am=&aw=&ad=1820
-2015-06-21 15:47:15,282:INFO:getNextUrl Value: http://www.timeanddate.com/date/dateadded.html?m1=5&d1=28&y1=2015&type=add&ay=&am=&aw=&ad=1846
-2015-06-21 15:47:15,284:INFO:Starting new HTTP connection (1): www.timeanddate.com
-2015-06-21 15:47:15,457:DEBUG:"GET /date/dateadded.html?m1=5&d1=28&y1=2015&type=add&ay=&am=&aw=&ad=1820 HTTP/1.1" 200 5148
-2015-06-21 15:47:15,461:INFO:Starting new HTTP connection (1): www.timeanddate.com
-2015-06-21 15:47:15,637:DEBUG:"GET /date/dateadded.html?m1=5&d1=28&y1=2015&type=add&ay=&am=&aw=&ad=1846 HTTP/1.1" 200 5159
-2015-06-21 15:47:15,644:DEBUG:ValidateResult: Correct result obtained
-2015-06-21 15:47:15,644:INFO:Returning Result : Bae, 
-
-I'll pay you a visit day after Thursday, May 21 2020. 
-2015-06-21 15:47:15,644:INFO:Returning Result : Bae, 
-
-I'll pay you a visit day after Thursday, May 21 2020. 
-2015-06-21 15:47:15,644:INFO:Returning Result : Bae, 
-
-I'll pay you a visit day after Thursday, May 21 2020. 
-2015-06-21 15:47:15,644:INFO:Returning Result : Bae, 
-
-I'll pay you a visit day after Thursday, May 21 2020. 
-2015-06-21 15:47:15,644:INFO:Returning Result : Bae, 
-
-I'll pay you a visit day after Thursday, May 21 2020. 
-2015-06-21 15:47:15,644:INFO:Returning Result : Bae, 
-
-I'll pay you a visit day after Thursday, May 21 2020. 
-2015-06-21 15:47:15,644:INFO:Returning Result : Bae, 
-
-I'll pay you a visit day after Thursday, May 21 2020. 
-2015-06-21 15:47:15,644:INFO:Returning Result : Bae, 
-
-I'll pay you a visit day after Thursday, May 21 2020. 
-2015-06-21 15:47:15,645:INFO:Returning Result : Bae, 
-
-I'll pay you a visit day after Thursday, May 21 2020. 
-2015-06-21 15:47:15,645:INFO:Returning Result : Bae, 
-
-I'll pay you a visit day after Thursday, May 21 2020. 
-2015-06-21 15:47:15,647:INFO:Starting new HTTP connection (1): www.wisdomofchopra.com
-2015-06-21 15:47:16,750:DEBUG:"GET /iframe.php HTTP/1.1" 200 1688
-2015-06-21 15:47:16,751:DEBUG:Wisdom Fetched : Our consciousness explains exponential bliss
-2015-06-21 15:47:16,752:DEBUG:
+I'll pay you a visit day after Wednesday, March 9 2016. 
+2015-06-21 16:29:47,590:INFO:Starting new HTTP connection (1): www.wisdomofchopra.com
+2015-06-21 16:29:48,718:DEBUG:"GET /iframe.php HTTP/1.1" 200 1682
+2015-06-21 16:29:48,720:DEBUG:Wisdom Fetched : Qualia constructs descriptions of positivity
+2015-06-21 16:29:48,720:DEBUG:
  Python : Done executing Service, replying back with report.
-2015-06-21 15:47:16,752:DEBUG:Sending email to user.
-2015-06-21 15:47:20,049:DEBUG:Successfully sent the mail.
-2015-06-21 15:47:20,049:DEBUG:Done sending email.
-2015-06-21 15:47:20,049:DEBUG:Service trigger flag Disabled. 
-2015-06-21 15:47:20,050:DEBUG:Iteration complete. Hibernate for 10 seconds.
-2015-06-21 15:47:30,045:DEBUG:Starting program.
-2015-06-21 15:47:30,046:DEBUG:Iteration #3
-2015-06-21 15:47:30,046:DEBUG:Fetching messages from gmail inbox.
-2015-06-21 15:47:30,339:DEBUG:Logging in.
-2015-06-21 15:47:31,712:DEBUG:Mail downloaded, seperating unseen messages.
-2015-06-21 15:47:31,942:DEBUG:* No New Messages : Returning to caller ! *
-2015-06-21 15:47:31,943:DEBUG:No trigger received thus far.
-2015-06-21 15:47:31,943:DEBUG:Iteration complete. Hibernate for 10 seconds.
-2015-06-21 15:47:41,939:DEBUG:Starting program.
-2015-06-21 15:47:41,939:DEBUG:Iteration #4
-2015-06-21 15:47:41,939:DEBUG:Fetching messages from gmail inbox.
-2015-06-21 15:47:42,265:DEBUG:Logging in.
-2015-06-21 15:47:43,698:DEBUG:Mail downloaded, seperating unseen messages.
-2015-06-21 15:47:43,926:DEBUG:* No New Messages : Returning to caller ! *
-2015-06-21 15:47:43,926:DEBUG:No trigger received thus far.
-2015-06-21 15:47:43,926:DEBUG:Iteration complete. Hibernate for 10 seconds.
-2015-06-21 15:47:53,922:DEBUG:Starting program.
-2015-06-21 15:47:53,922:DEBUG:Iteration #5
-2015-06-21 15:47:53,922:DEBUG:Fetching messages from gmail inbox.
-2015-06-21 15:47:54,243:DEBUG:Logging in.
-2015-06-21 15:47:55,579:DEBUG:Mail downloaded, seperating unseen messages.
-2015-06-21 15:47:55,867:DEBUG:* No New Messages : Returning to caller ! *
-2015-06-21 15:47:55,868:DEBUG:No trigger received thus far.
-2015-06-21 15:47:55,868:DEBUG:Iteration complete. Hibernate for 10 seconds.
-2015-06-21 15:48:05,863:DEBUG:Starting program.
-2015-06-21 15:48:05,863:DEBUG:Iteration #6
-2015-06-21 15:48:05,864:DEBUG:Fetching messages from gmail inbox.
-2015-06-21 15:48:06,197:DEBUG:Logging in.
-2015-06-21 15:48:06,815:DEBUG:Mail downloaded, seperating unseen messages.
-2015-06-21 15:48:07,027:DEBUG:* No New Messages : Returning to caller ! *
-2015-06-21 15:48:07,028:DEBUG:No trigger received thus far.
-2015-06-21 15:48:07,028:DEBUG:Iteration complete. Hibernate for 10 seconds.
+2015-06-21 16:29:48,720:DEBUG:Sending email to user.
+2015-06-21 16:29:52,060:DEBUG:Successfully sent the mail.
+2015-06-21 16:29:52,060:DEBUG:Done sending email.
+2015-06-21 16:29:52,060:DEBUG:Service trigger flag Disabled. 
+2015-06-21 16:29:52,060:DEBUG:Iteration complete. Hibernate for 10 seconds.
+2015-06-21 16:30:02,057:DEBUG:Starting program.
+2015-06-21 16:30:02,057:DEBUG:Iteration #2
+2015-06-21 16:30:02,057:DEBUG:Fetching messages from gmail inbox.
+2015-06-21 16:30:02,387:DEBUG:Logging in.
+2015-06-21 16:30:03,625:DEBUG:Mail downloaded, seperating unseen messages.
+2015-06-21 16:30:03,920:DEBUG:* No New Messages : Returning to caller ! *
+2015-06-21 16:30:03,921:DEBUG:No trigger received thus far.
+2015-06-21 16:30:03,921:DEBUG:Iteration complete. Hibernate for 10 seconds.
+2015-06-21 16:30:13,917:DEBUG:Starting program.
+2015-06-21 16:30:13,917:DEBUG:Iteration #3
+2015-06-21 16:30:13,918:DEBUG:Fetching messages from gmail inbox.
+2015-06-21 16:30:14,279:DEBUG:Logging in.
+2015-06-21 16:30:15,583:DEBUG:Mail downloaded, seperating unseen messages.
+2015-06-21 16:30:15,798:DEBUG:* No New Messages : Returning to caller ! *
+2015-06-21 16:30:15,799:DEBUG:No trigger received thus far.
+2015-06-21 16:30:15,799:DEBUG:Iteration complete. Hibernate for 10 seconds.
+2015-06-21 16:30:25,795:DEBUG:Starting program.
+2015-06-21 16:30:25,795:DEBUG:Iteration #4
+2015-06-21 16:30:25,795:DEBUG:Fetching messages from gmail inbox.
+2015-06-21 16:30:26,151:DEBUG:Logging in.
+2015-06-21 16:30:26,845:DEBUG:Mail downloaded, seperating unseen messages.
+2015-06-21 16:30:27,148:DEBUG:* No New Messages : Returning to caller ! *
+2015-06-21 16:30:27,148:DEBUG:No trigger received thus far.
+2015-06-21 16:30:27,148:DEBUG:Iteration complete. Hibernate for 10 seconds.
+2015-06-21 16:30:37,145:DEBUG:Starting program.
+2015-06-21 16:30:37,145:DEBUG:Iteration #5
+2015-06-21 16:30:37,145:DEBUG:Fetching messages from gmail inbox.
+2015-06-21 16:30:37,512:DEBUG:Logging in.
+2015-06-21 16:30:38,185:DEBUG:Mail downloaded, seperating unseen messages.
+2015-06-21 16:30:38,402:DEBUG:* No New Messages : Returning to caller ! *
+2015-06-21 16:30:38,402:DEBUG:No trigger received thus far.
+2015-06-21 16:30:38,402:DEBUG:Iteration complete. Hibernate for 10 seconds.
+2015-06-21 16:30:48,398:DEBUG:Starting program.
+2015-06-21 16:30:48,398:DEBUG:Iteration #6
+2015-06-21 16:30:48,399:DEBUG:Fetching messages from gmail inbox.
+2015-06-21 16:30:48,747:DEBUG:Logging in.
+2015-06-21 16:30:49,582:DEBUG:Mail downloaded, seperating unseen messages.
+2015-06-21 16:30:49,794:DEBUG:* No New Messages : Returning to caller ! *
+2015-06-21 16:30:49,794:DEBUG:No trigger received thus far.
+2015-06-21 16:30:49,794:DEBUG:Iteration complete. Hibernate for 10 seconds.
+2015-06-21 16:30:59,790:DEBUG:Starting program.
+2015-06-21 16:30:59,791:DEBUG:Iteration #7
+2015-06-21 16:30:59,791:DEBUG:Fetching messages from gmail inbox.
+2015-06-21 16:31:00,105:DEBUG:Logging in.
+2015-06-21 16:31:01,353:DEBUG:Mail downloaded, seperating unseen messages.
+2015-06-21 16:31:01,574:DEBUG:* No New Messages : Returning to caller ! *
+2015-06-21 16:31:01,575:DEBUG:No trigger received thus far.
+2015-06-21 16:31:01,575:DEBUG:Iteration complete. Hibernate for 10 seconds.
+2015-06-21 16:31:11,571:DEBUG:Starting program.
+2015-06-21 16:31:11,571:DEBUG:Iteration #8
+2015-06-21 16:31:11,572:DEBUG:Fetching messages from gmail inbox.
+2015-06-21 16:31:11,998:DEBUG:Logging in.
+2015-06-21 16:31:12,573:DEBUG:Mail downloaded, seperating unseen messages.
+2015-06-21 16:31:12,838:DEBUG:* No New Messages : Returning to caller ! *
+2015-06-21 16:31:12,838:DEBUG:No trigger received thus far.
+2015-06-21 16:31:12,838:DEBUG:Iteration complete. Hibernate for 10 seconds.
+2015-06-21 16:31:22,835:DEBUG:Starting program.
+2015-06-21 16:31:22,835:DEBUG:Iteration #9
+2015-06-21 16:31:22,835:DEBUG:Fetching messages from gmail inbox.
+2015-06-21 16:31:23,164:DEBUG:Logging in.
+2015-06-21 16:31:24,356:DEBUG:Mail downloaded, seperating unseen messages.
+2015-06-21 16:31:24,571:DEBUG:* No New Messages : Returning to caller ! *
+2015-06-21 16:31:24,572:DEBUG:No trigger received thus far.
+2015-06-21 16:31:24,572:DEBUG:Iteration complete. Hibernate for 10 seconds.
+2015-06-21 16:31:34,567:DEBUG:Starting program.
+2015-06-21 16:31:34,568:DEBUG:Iteration #10
+2015-06-21 16:31:34,568:DEBUG:Fetching messages from gmail inbox.
+2015-06-21 16:31:35,041:DEBUG:Logging in.
+2015-06-21 16:31:36,329:DEBUG:Mail downloaded, seperating unseen messages.
+2015-06-21 16:31:36,567:DEBUG:* No New Messages : Returning to caller ! *
+2015-06-21 16:31:36,567:DEBUG:No trigger received thus far.
+2015-06-21 16:31:36,567:DEBUG:Iteration complete. Hibernate for 10 seconds.
+2015-06-21 16:31:46,564:DEBUG:Starting program.
+2015-06-21 16:31:46,564:DEBUG:Iteration #11
+2015-06-21 16:31:46,564:DEBUG:Fetching messages from gmail inbox.
+2015-06-21 16:31:46,893:DEBUG:Logging in.
+2015-06-21 16:31:48,221:DEBUG:Mail downloaded, seperating unseen messages.
+2015-06-21 16:31:48,442:DEBUG:* No New Messages : Returning to caller ! *
+2015-06-21 16:31:48,443:DEBUG:No trigger received thus far.
+2015-06-21 16:31:48,443:DEBUG:Iteration complete. Hibernate for 10 seconds.
+2015-06-21 16:31:58,439:DEBUG:Starting program.
+2015-06-21 16:31:58,439:DEBUG:Iteration #12
+2015-06-21 16:31:58,439:DEBUG:Fetching messages from gmail inbox.
+2015-06-21 16:31:58,811:DEBUG:Logging in.
+2015-06-21 16:31:59,665:DEBUG:Mail downloaded, seperating unseen messages.
+2015-06-21 16:32:00,074:DEBUG:* No New Messages : Returning to caller ! *
+2015-06-21 16:32:00,074:DEBUG:No trigger received thus far.
+2015-06-21 16:32:00,074:DEBUG:Iteration complete. Hibernate for 10 seconds.
+2015-06-21 16:32:10,070:DEBUG:Starting program.
+2015-06-21 16:32:10,070:DEBUG:Iteration #13
+2015-06-21 16:32:10,070:DEBUG:Fetching messages from gmail inbox.
+2015-06-21 16:32:10,378:DEBUG:Logging in.
+2015-06-21 16:32:11,152:DEBUG:Mail downloaded, seperating unseen messages.
+2015-06-21 16:32:11,348:DEBUG:* No New Messages : Returning to caller ! *
+2015-06-21 16:32:11,349:DEBUG:No trigger received thus far.
+2015-06-21 16:32:11,349:DEBUG:Iteration complete. Hibernate for 10 seconds.
+2015-06-21 16:32:21,345:DEBUG:Starting program.
+2015-06-21 16:32:21,345:DEBUG:Iteration #14
+2015-06-21 16:32:21,345:DEBUG:Fetching messages from gmail inbox.
+2015-06-21 16:32:21,684:DEBUG:Logging in.
+2015-06-21 16:32:22,530:DEBUG:Mail downloaded, seperating unseen messages.
+2015-06-21 16:32:22,758:DEBUG:* No New Messages : Returning to caller ! *
+2015-06-21 16:32:22,758:DEBUG:No trigger received thus far.
+2015-06-21 16:32:22,758:DEBUG:Iteration complete. Hibernate for 10 seconds.
+2015-06-21 16:32:32,753:DEBUG:Starting program.
+2015-06-21 16:32:32,754:DEBUG:Iteration #15
+2015-06-21 16:32:32,754:DEBUG:Fetching messages from gmail inbox.
+2015-06-21 16:32:33,145:DEBUG:Logging in.
+2015-06-21 16:32:34,460:DEBUG:Mail downloaded, seperating unseen messages.
+2015-06-21 16:32:34,671:DEBUG:* No New Messages : Returning to caller ! *
+2015-06-21 16:32:34,672:DEBUG:No trigger received thus far.
+2015-06-21 16:32:34,672:DEBUG:Iteration complete. Hibernate for 10 seconds.
+2015-06-21 16:32:44,667:DEBUG:Starting program.
+2015-06-21 16:32:44,668:DEBUG:Iteration #16
+2015-06-21 16:32:44,668:DEBUG:Fetching messages from gmail inbox.
+2015-06-21 16:32:45,024:DEBUG:Logging in.
+2015-06-21 16:32:45,834:DEBUG:Mail downloaded, seperating unseen messages.
+2015-06-21 16:32:46,060:DEBUG:* No New Messages : Returning to caller ! *
+2015-06-21 16:32:46,060:DEBUG:No trigger received thus far.
+2015-06-21 16:32:46,061:DEBUG:Iteration complete. Hibernate for 10 seconds.
+2015-06-21 16:32:56,057:DEBUG:Starting program.
+2015-06-21 16:32:56,057:DEBUG:Iteration #17
+2015-06-21 16:32:56,057:DEBUG:Fetching messages from gmail inbox.
+2015-06-21 16:32:56,395:DEBUG:Logging in.
+2015-06-21 16:32:58,625:DEBUG:Mail downloaded, seperating unseen messages.
+2015-06-21 16:32:59,030:DEBUG:* No New Messages : Returning to caller ! *
+2015-06-21 16:32:59,030:DEBUG:No trigger received thus far.
+2015-06-21 16:32:59,030:DEBUG:Iteration complete. Hibernate for 10 seconds.
+2015-06-21 16:33:09,027:DEBUG:Starting program.
+2015-06-21 16:33:09,027:DEBUG:Iteration #18
+2015-06-21 16:33:09,027:DEBUG:Fetching messages from gmail inbox.
+2015-06-21 16:33:09,393:DEBUG:Logging in.
+2015-06-21 16:33:12,758:DEBUG:Mail downloaded, seperating unseen messages.
+2015-06-21 16:33:13,161:DEBUG:* No New Messages : Returning to caller ! *
+2015-06-21 16:33:13,162:DEBUG:No trigger received thus far.
+2015-06-21 16:33:13,162:DEBUG:Iteration complete. Hibernate for 10 seconds.
+2015-06-21 16:33:23,157:DEBUG:Starting program.
+2015-06-21 16:33:23,158:DEBUG:Iteration #19
+2015-06-21 16:33:23,158:DEBUG:Fetching messages from gmail inbox.
+2015-06-21 16:33:24,007:DEBUG:Logging in.
+2015-06-21 16:33:24,724:DEBUG:Mail downloaded, seperating unseen messages.
+2015-06-21 16:33:24,919:DEBUG:* No New Messages : Returning to caller ! *
+2015-06-21 16:33:24,919:DEBUG:No trigger received thus far.
+2015-06-21 16:33:24,919:DEBUG:Iteration complete. Hibernate for 10 seconds.
+2015-06-21 16:33:34,916:DEBUG:Starting program.
+2015-06-21 16:33:34,916:DEBUG:Iteration #20
+2015-06-21 16:33:34,916:DEBUG:Fetching messages from gmail inbox.
+2015-06-21 16:33:35,208:DEBUG:Logging in.
+2015-06-21 16:33:36,433:DEBUG:Mail downloaded, seperating unseen messages.
+2015-06-21 16:33:36,633:DEBUG:New Unseen messages detected.
+2015-06-21 16:33:36,633:DEBUG:Saving one email with following credentials.
+2015-06-21 16:33:37,013:DEBUG:From: itsabug itsnotafeature <itsabugitsnotafeature@gmail.com>
+2015-06-21 16:33:37,014:DEBUG:Queen Bee Email Address saved. Value :itsabugitsnotafeature@gmail.com
+2015-06-21 16:33:37,014:DEBUG:Subject: DISASTROPHE is disastrophe is catastrophe meets disaster
+2015-06-21 16:33:37,014:DEBUG:Saving email message.
+2015-06-21 16:33:37,014:DEBUG: ### TERMINATE SCANNER CODE RECEIVED #### 
+2015-06-21 16:33:37,014:DEBUG:Sending email to user.
+2015-06-21 16:33:40,507:DEBUG:Successfully sent the mail.
+2015-06-21 16:33:40,508:DEBUG:Done sending email.
+2015-06-21 16:33:40,508:DEBUG:Email Scanner flag DISABLED. 
+2015-06-21 16:33:40,508:DEBUG:Termination flag set to: False
+2015-06-21 16:33:40,510:DEBUG:Incrementing global email counter
+2015-06-21 16:33:40,511:DEBUG:New Value:2
+2015-06-21 16:33:40,511:DEBUG:Email saved.
+2015-06-21 16:33:40,511:DEBUG:Looking for attachments.
+2015-06-21 16:33:40,511:DEBUG:Saving body content.
+2015-06-21 16:33:40,511:DEBUG:No attachments found.
+2015-06-21 16:33:40,511:DEBUG:Done saving message !
+2015-06-21 16:33:40,511:DEBUG:No trigger received thus far.
+2015-06-21 16:33:40,512:DEBUG:Goodbye Master !! 
+**** Terminating program ****

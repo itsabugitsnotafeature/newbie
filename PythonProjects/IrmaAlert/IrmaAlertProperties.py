@@ -19,7 +19,7 @@ triggerServiceFlag = False
 
 enableScannerFlag = False
 activateServiceString = 'riddle'
-terminateScannerString = 'disasastrophe'
+terminateScannerString = 'disastrophe'
 
 commandToExecute = "mvn --version "
 commandConsoleLog = ''
@@ -43,8 +43,8 @@ pop_conn.pass_(gmail_pwd)
 replySubject = "Aunt Irma has the answer !"
 replyBody = commandConsoleLog
 
-acknowledgementSubject = "Master Acknowledgement !"
-acknowledgementBody = 'Ack Message : Ping received successfully'
+terminationSubject = "Aunt is about to go quiet !"
+terminationBody = "\n\nAunt Irma is Died .\n\n"
 
 invalidQuerySubject = "Look what you did !"
 invalidQueryBody = " Sweetie, \nI don't yet have the smarts deal with the twisted ass date you" \
@@ -56,7 +56,7 @@ unExpectedConditionBody = " I'm Sorry Honey, \nSomething bad just happened, and 
                             " Basically, just dumb it down for me babe. \n\nXoXo \nAunt Irma"
 
 
-attachmentsAck = []
+emailAttachments = []
 
 
 '''

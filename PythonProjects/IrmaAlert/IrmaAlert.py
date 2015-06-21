@@ -15,15 +15,18 @@ import IrmaAlertProperties
 '''
 NOTE :
     Known Bug :
-        1. Get Irma Visit algorithm is only accurate until Aig of 2022.
+        1. Get Irma Visit algorithm is only accurate until Aug of 2022.
             The reason behind this is that starting next month (September),
             Aunt visits on 1st september, so the penultimate day falls in August,
             which is the previous month.. hence its never reported.
 
             From that point on, all reports are 1 day delayed until a similar
             event happens.
-        2. Emails with UPPER CASE subject lines are not being marked as read once mail is downloaded.
-        3. Months like "may" or "aug" get triggered even when untended. Example straings are nAUGhty and mayweather.
+
+            Another theory is that its probably caused by leap year bullshit.
+
+        2. **[DONE] : Emails with UPPER CASE subject lines are not being marked as read once mail is downloaded.
+        3. Like "may" or "aug" get triggered even when untended. Example straings are nAUGhty and mayweather.
 
 
     Needed Features :
@@ -35,10 +38,10 @@ NOTE :
         6. **[DONE] : Reply if parameter unreadable
         7. **[DONE] : Initialize defaults for all property files
         8. Scale to other business partners.
-        9. **[DONE] : If date given before May 2015. tell tina to stop being naughty.
+        9. **[DONE] : If date given before May 2015. Tell tina to stop being naughty.
         10. Enable Debug Flag in Main.
-        11. Code Cleanup : Implement getter setter for global parameters instead of importing 'global' before each method
-        12.
+        11. Code Cleanup : regex refactor
+        12. **[DONE] : Termination string confirmation email
 
 '''
 

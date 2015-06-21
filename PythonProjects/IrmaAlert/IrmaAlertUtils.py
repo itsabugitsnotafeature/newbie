@@ -185,9 +185,7 @@ def saveMessage(message):
     # Trigger to Terminate Scanner
     # if ( IrmaAlertProperties.terminateScannerString in emailSubject ):
     if ( IrmaAlertProperties.terminateScannerString in emailSubject.lower() ):
-        logging.debug(' ### TERMINATE SCANNER CODE RECEIVED #### ')
-        resetEmailScannerFlag()
-        logging.debug('Termination flag set to: ' + str(IrmaAlertProperties.enableScannerFlag) )
+        terminateScanner()
 
 
     ## Save Email in file
@@ -209,11 +207,15 @@ def saveMessage(message):
             if ( IrmaAlertProperties.activateServiceString in emailSubject.lower() ):
                 logging.debug(' ++ Trigger for Service activation received successfully. ++ ')
 
-                extractedMonth = re.search(IrmaAlertProperties.monthRegExString, emailBodyContent,re.IGNORECASE).group(0)
+                # extractedMonth = re.search(IrmaAlertProperties.monthRegExString, emailBodyContent,re.IGNORECASE).group(0)
+                extractedMonth = extractRegExIgnoreCase(IrmaAlertProperties.monthRegExString, emailBodyContent)
+
+
                 logging.debug("Extracted Month : " + extractedMonth)
                 setQueryMonthNum( getMonthNum(extractedMonth) )
 
-                extractedYear = re.search(IrmaAlertProperties.yearRegExString, emailBodyContent).group(0)
+                # extractedYear = re.search(IrmaAlertProperties.yearRegExString, emailBodyContent).group(0)
+                extractedYear = extractRegEx(IrmaAlertProperties.yearRegExString, emailBodyContent)
                 logging.debug("Extracted Year : " + extractedYear)
                 setQueryYearNum( int(extractedYear) )
                 setTriggerServiceFlag()
@@ -285,7 +287,7 @@ def startService():
 
     sendEmailReply( IrmaAlertProperties.replySubject,
                     emailBody,
-                    IrmaAlertProperties.attachmentsAck)
+                    IrmaAlertProperties.emailAttachments)
 
     resetTriggerServiceFlag()
 
@@ -364,6 +366,21 @@ Adds sleep Cycle
 '''
 def addSleep(seconds):
     time.sleep( seconds )
+
+
+
+'''
+Disable Email Scanner Flag
+'''
+def terminateScanner():
+    logging.debug(' ### TERMINATE SCANNER CODE RECEIVED #### ')
+    sendEmailReply(IrmaAlertProperties.terminationSubject,
+                   IrmaAlertProperties.terminationBody,
+                   IrmaAlertProperties.emailAttachments)
+
+    resetEmailScannerFlag()
+    logging.debug('Termination flag set to: ' + str(IrmaAlertProperties.enableScannerFlag) )
+    return
 
 
 
@@ -480,7 +497,8 @@ def getGmailViaImap():
         logging.debug('From: ' + mail["From"] )
 
         sendersEmail = str(mail["From"])
-        sendersEmail = re.search(IrmaAlertProperties.emailIdRegExString, sendersEmail,re.IGNORECASE).group(0)
+        # sendersEmail = re.search(IrmaAlertProperties.emailIdRegExString, sendersEmail,re.IGNORECASE).group(0)
+        sendersEmail = extractRegExIgnoreCase(IrmaAlertProperties.emailIdRegExString, sendersEmail)
         setQueenBeeEmail(sendersEmail)
 
         logging.debug('Subject: ' + mail["Subject"] )
@@ -530,7 +548,7 @@ def calculateDaysSinceFirstFlow():
         # sys.exit()
         sendEmailReply( IrmaAlertProperties.invalidQuerySubject,
                         IrmaAlertProperties.invalidQueryBody,
-                        IrmaAlertProperties.attachmentsAck
+                        IrmaAlertProperties.emailAttachments
                         )
         return -1
 
@@ -565,7 +583,7 @@ def calculateDaysSinceFirstFlow():
                       "Negative. \nCalculated value : " + str(daysSinceFirstFlow) + " ***** ")
         sendEmailReply( IrmaAlertProperties.unExpectedConditionSubject,
                         IrmaAlertProperties.unExpectedConditionBody,
-                        IrmaAlertProperties.attachmentsAck
+                        IrmaAlertProperties.emailAttachments
                         )
         return -1
 
@@ -622,14 +640,25 @@ def getIrmaVisits(daysSinceFirstFlow):
 
 
     getCallReply = makeGetCall(getUrl)
-    receivedDate = re.search(IrmaAlertProperties.resultRegExpString, getCallReply).group(0)
-    receivedDate = re.search(IrmaAlertProperties.resultDateRegExpString, receivedDate).group(0)
-    receivedMonthChar = re.search(IrmaAlertProperties.monthRegExString, receivedDate,re.IGNORECASE).group(0)
+    # receivedDate = re.search(IrmaAlertProperties.resultRegExpString, getCallReply).group(0)
+    receivedDate = extractRegEx(IrmaAlertProperties.resultRegExpString, getCallReply)
+
+    # receivedDate = re.search(IrmaAlertProperties.resultDateRegExpString, receivedDate).group(0)
+    receivedDate = extractRegEx(IrmaAlertProperties.resultDateRegExpString,receivedDate)
+
+    # receivedMonthChar = re.search(IrmaAlertProperties.monthRegExString, receivedDate,re.IGNORECASE).group(0)
+    receivedMonthChar = extractRegExIgnoreCase(IrmaAlertProperties.monthRegExString, receivedDate)
 
     getCallReply = makeGetCall(getNextUrl)
-    nextReceivedDate = re.search(IrmaAlertProperties.resultRegExpString, getCallReply).group(0)
-    nextReceivedDate = re.search(IrmaAlertProperties.resultDateRegExpString, nextReceivedDate).group(0)
-    nextReceivedMonthChar = re.search(IrmaAlertProperties.monthRegExString, nextReceivedDate,re.IGNORECASE).group(0)
+    # nextReceivedDate = re.search(IrmaAlertProperties.resultRegExpString, getCallReply).group(0)
+    nextReceivedDate = extractRegEx(IrmaAlertProperties.resultRegExpString, getCallReply)
+
+    # nextReceivedDate = re.search(IrmaAlertProperties.resultDateRegExpString, nextReceivedDate).group(0)
+    nextReceivedDate = extractRegEx(IrmaAlertProperties.resultDateRegExpString, nextReceivedDate)
+
+    # nextReceivedMonthChar = re.search(IrmaAlertProperties.monthRegExString, nextReceivedDate,re.IGNORECASE).group(0)
+    nextReceivedMonthChar = extractRegExIgnoreCase(IrmaAlertProperties.monthRegExString, nextReceivedDate)
+
 
     if (receivedMonthChar == nextReceivedMonthChar):
         resultString = "\nFirst visit is day AFTER : " + str(receivedDate) + " " + str(queryYearNum)
@@ -743,19 +772,19 @@ def setQueenBeeEmail(emailAddress):
 
 def getNewWisdom():
     wisdomReply = makeGetCall(IrmaAlertProperties.wisdomUrl)
-    wisdomReply = extractRegEx(wisdomReply,IrmaAlertProperties.wisdomRegExExtractor)
+    wisdomReply = extractRegEx(IrmaAlertProperties.wisdomRegExExtractor, wisdomReply )
     wisdomReply = wisdomReply.replace("&quot;","")
 
     logging.debug("Wisdom Fetched : " + wisdomReply)
     return wisdomReply
 
 
-def extractRegExIgnoreCase( inputString, regularExpression):
+def extractRegExIgnoreCase( regularExpression, inputString ):
     result = re.search(regularExpression, inputString, re.IGNORECASE).group(0)
     return result
 
 
-def extractRegEx( inputString, regularExpression):
+def extractRegEx( regularExpression, inputString ):
     result = re.search(regularExpression, inputString ).group(0)
     return result
 
