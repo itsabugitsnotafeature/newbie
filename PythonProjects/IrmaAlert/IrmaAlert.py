@@ -27,17 +27,18 @@ NOTE :
 
 
     Needed Features :
-        1. [DONE] : Extract senders email address.
-        2. Smart text in reply.
-        3. Better Trigger string.
-        4. Better termination string.
-        5. Default value for daysSinceFirstFlow should be days to current month.
-        6. Reply if parameter unreadable
-        7. Initialize defaults for all property files
+        1. **[DONE] : Extract senders email address.
+        2. **[DONE] : Smart text in reply, adding new wisdom with each mail.
+        3. **[DONE] : Better Trigger string.
+        4. **[DONE] : Better termination string.
+        5. **[DONE] : Default value for daysSinceFirstFlow should be days to current month.
+        6. **[DONE] : Reply if parameter unreadable
+        7. **[DONE] : Initialize defaults for all property files
         8. Scale to other business partners.
-        9. If date given before May 2015. tell tina to stop being naughty.
+        9. **[DONE] : If date given before May 2015. tell tina to stop being naughty.
         10. Enable Debug Flag in Main.
         11. Code Cleanup : Implement getter setter for global parameters instead of importing 'global' before each method
+        12.
 
 '''
 
@@ -51,6 +52,7 @@ def main():
     Debug 1 : Run service Without scanning email
     '''
     # IrmaAlertUtils.startService()
+    # print IrmaAlertUtils.getNewWisdom()
 
 
     while (  IrmaAlertUtils.isEmailScannerEnabled() ) :

@@ -276,13 +276,15 @@ def startService():
     logging.debug("Starting Service!")
     logging.debug("Days since first flow : " + str(daysSinceFirstFlow) )
 
-    serviceResult = getIrmaVisits(daysSinceFirstFlow)
+    visitDate = getIrmaVisits(daysSinceFirstFlow)
 
-    logging.debug("Got the service Execution result : " + serviceResult)
+    fetchedWisdom = getNewWisdom()
+    emailBody = visitDate + "\n" + "But remember, " + fetchedWisdom +  "\n\nXoXo \nAunt Irma"
+
     logging.debug("\n Python : Done executing Service, replying back with report.")
 
     sendEmailReply( IrmaAlertProperties.replySubject,
-                    serviceResult,
+                    emailBody,
                     IrmaAlertProperties.attachmentsAck)
 
     resetTriggerServiceFlag()
@@ -634,7 +636,7 @@ def getIrmaVisits(daysSinceFirstFlow):
         resultString += "\nSecond visit is day AFTER : " + str(nextReceivedDate) + " " + str(queryYearNum)
 
     else:
-        resultString = "Aunt Irma visiting day AFTER : " + str(receivedDate) + " " + str(queryYearNum)
+        resultString = "Bae, \n\nI'll pay you a visit day after " + str(receivedDate) + " " + str(queryYearNum) +". "
 
     resultString = validateResults(resultString)
     logging.info("Returning Result : "+ resultString)
@@ -737,6 +739,30 @@ def setQueenBeeEmail(emailAddress):
     queenBeeEmail = emailAddress
     logging.debug("Queen Bee Email Address saved. Value :" + emailAddress)
     return
+
+
+def getNewWisdom():
+    wisdomReply = makeGetCall(IrmaAlertProperties.wisdomUrl)
+    wisdomReply = extractRegEx(wisdomReply,IrmaAlertProperties.wisdomRegExExtractor)
+    wisdomReply = wisdomReply.replace("&quot;","")
+
+    logging.debug("Wisdom Fetched : " + wisdomReply)
+    return wisdomReply
+
+
+def extractRegExIgnoreCase( inputString, regularExpression):
+    result = re.search(regularExpression, inputString, re.IGNORECASE).group(0)
+    return result
+
+
+def extractRegEx( inputString, regularExpression):
+    result = re.search(regularExpression, inputString ).group(0)
+    return result
+
+
+
+
+
 
 
 

@@ -29,18 +29,18 @@ commandConsoleLog = ''
 Mail Parameters
 '''
 #Credentials_Incoming
-gmail_user=''
-gmail_pwd=''
+gmail_user='whenisirmavisiting'
+gmail_pwd='whenishightide'
 
 #Credentials_Outgoing
-outgoing_user='@gmail.com'
+outgoing_user='whenisirmavisiting@gmail.com'
 
 pop_conn = poplib.POP3_SSL('pop.gmail.com')
 pop_conn.user('recent:'+gmail_user)
 pop_conn.pass_(gmail_pwd)
 
 #Payload
-replySubject = "Here you go dear !"
+replySubject = "Aunt Irma has the answer !"
 replyBody = commandConsoleLog
 
 acknowledgementSubject = "Master Acknowledgement !"
@@ -52,7 +52,7 @@ invalidQueryBody = " Sweetie, \nI don't yet have the smarts deal with the twiste
 
 unExpectedConditionSubject = "Oops ! Something Unexpected happened"
 unExpectedConditionBody = " I'm Sorry Honey, \nSomething bad just happened, and I happen to be a dumb program.\n" \
-                            " Can you please ask nicely one more time. Ignore my prior email. \n" \
+                            " You are a good Quotion-$%^&  But your Quotion HURT me.... \n" \
                             " Basically, just dumb it down for me babe. \n\nXoXo \nAunt Irma"
 
 
@@ -79,3 +79,5 @@ monthRegExString = 'jan[A-Z]*|feb[A-Z]*|mar[A-Z]*|apr[A-Z]*|may|jun[A-Z]*|jul[A-
 yearRegExString = '20[0-9][0-9]'
 emailIdRegExString = '\w+@[\w.-]+|\{(?:\w+, *)+\w+\}@[\w.-]+'
 
+wisdomRegExExtractor = '&quot;(.*)&quot;'
+wisdomUrl = 'http://www.wisdomofchopra.com/iframe.php'
