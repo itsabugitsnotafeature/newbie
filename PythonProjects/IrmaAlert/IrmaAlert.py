@@ -23,17 +23,21 @@ NOTE :
             From that point on, all reports are 1 day delayed until a similar
             event happens.
         2. Emails with UPPER CASE subject lines are not being marked as read once mail is downloaded.
+        3. Months like "may" or "aug" get triggered even when untended. Example straings are nAUGhty and mayweather.
 
 
     Needed Features :
-        1. Extract senders email address.
+        1. [DONE] : Extract senders email address.
         2. Smart text in reply.
         3. Better Trigger string.
         4. Better termination string.
-        5. default value for daysSinceFirstFlow should be days to current month.
+        5. Default value for daysSinceFirstFlow should be days to current month.
         6. Reply if parameter unreadable
         7. Initialize defaults for all property files
-        8. scale to other business partners
+        8. Scale to other business partners.
+        9. If date given before May 2015. tell tina to stop being naughty.
+        10. Enable Debug Flag in Main.
+        11. Code Cleanup : Implement getter setter for global parameters instead of importing 'global' before each method
 
 '''
 

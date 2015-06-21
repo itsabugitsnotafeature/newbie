@@ -19,7 +19,7 @@ triggerServiceFlag = False
 
 enableScannerFlag = False
 activateServiceString = 'riddle'
-terminateScannerString = 'disastrope'
+terminateScannerString = 'disasastrophe'
 
 commandToExecute = "mvn --version "
 commandConsoleLog = ''
@@ -45,6 +45,17 @@ replyBody = commandConsoleLog
 
 acknowledgementSubject = "Master Acknowledgement !"
 acknowledgementBody = 'Ack Message : Ping received successfully'
+
+invalidQuerySubject = "Look what you did !"
+invalidQueryBody = " Sweetie, \nI don't yet have the smarts deal with the twisted ass date you" \
+                   " sent. Better luck next time ! \n\nXoXo \nAunt Irma"
+
+unExpectedConditionSubject = "Oops ! Something Unexpected happened"
+unExpectedConditionBody = " I'm Sorry Honey, \nSomething bad just happened, and I happen to be a dumb program.\n" \
+                            " Can you please ask nicely one more time. Ignore my prior email. \n" \
+                            " Basically, just dumb it down for me babe. \n\nXoXo \nAunt Irma"
+
+
 attachmentsAck = []
 
 
@@ -66,5 +77,5 @@ resultDateRegExpString = '([A-Z])\w+, ([A-Z])\w+ ([0-9])*'
 # monthRegExString = 'January|February|March|April|May|June|July|August|September|October|November|December'
 monthRegExString = 'jan[A-Z]*|feb[A-Z]*|mar[A-Z]*|apr[A-Z]*|may|jun[A-Z]*|jul[A-Z]*|aug[A-Z]*|sep[A-Z]*|oct[A-Z]*|nov[A-Z]*|dec[A-Z]*'
 yearRegExString = '20[0-9][0-9]'
-
+emailIdRegExString = '\w+@[\w.-]+|\{(?:\w+, *)+\w+\}@[\w.-]+'
 

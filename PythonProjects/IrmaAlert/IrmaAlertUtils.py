@@ -26,6 +26,8 @@ daysSinceFirstFlow = ''
 queryMonthNum = ''
 queryYearNum = ''
 
+queenBeeEmail = ''
+
 '''
 Mail Parameters
 '''
@@ -124,7 +126,8 @@ def setup():
 
     queryMonthNum = IrmaAlertProperties.targetMonthNum
     queryYearNum = IrmaAlertProperties.targetYearNum
-    daysSinceFirstFlow = getDaysSinceFirstFlow()
+    daysSinceFirstFlow = calculateDaysSinceFirstFlow()
+    setQueenBeeEmail( IrmaAlertProperties.outgoing_user )
 
     logging.debug('Done with setup().')
 
@@ -263,7 +266,13 @@ Method to start User Service
 def startService():
     global daysSinceFirstFlow
 
-    daysSinceFirstFlow = getDaysSinceFirstFlow()
+    daysSinceFirstFlow = calculateDaysSinceFirstFlow()
+
+    if daysSinceFirstFlow == -1:
+        logging.debug("Invalid request caught. Returning to main().")
+        resetTriggerServiceFlag()
+        return
+
     logging.debug("Starting Service!")
     logging.debug("Days since first flow : " + str(daysSinceFirstFlow) )
 
@@ -395,13 +404,14 @@ def resetTriggerServiceFlag():
 Method to send Email Response
 '''
 def sendEmailReply(emailSubject,emailBody,attachments):
-    logging.debug("Sending email.")
+    logging.debug("Sending email to user.")
 
     gmail_user_email = IrmaAlertProperties.gmail_user+"@gmail.com"
     emailMessage = MIMEMultipart()
     emailMessage['Subject'] = emailSubject
     emailMessage['From'] = gmail_user_email
-    emailMessage['To'] = IrmaAlertProperties.outgoing_user
+    # emailMessage['To'] = IrmaAlertProperties.outgoing_user
+    emailMessage['To'] = getQueenBeeEmail()
 
     # That is what u see if dont have an email reader:
     emailMessage.preamble = 'Multipart massage.\n'
@@ -466,6 +476,11 @@ def getGmailViaImap():
         mail = email.message_from_string(email_body) # parsing the mail content to get a mail object
 
         logging.debug('From: ' + mail["From"] )
+
+        sendersEmail = str(mail["From"])
+        sendersEmail = re.search(IrmaAlertProperties.emailIdRegExString, sendersEmail,re.IGNORECASE).group(0)
+        setQueenBeeEmail(sendersEmail)
+
         logging.debug('Subject: ' + mail["Subject"] )
         saveMessage(mail)
 
@@ -504,13 +519,23 @@ def validateResults(resultString):
         return  resultString
 
 
-def getDaysSinceFirstFlow():
+def calculateDaysSinceFirstFlow():
     MONTHS_PER_YEAR = 12
     global queryYearNum
 
     if (not checkValidRequesst()):
-        logging.error("Killing Program !")
-        sys.exit()
+        logging.error("Invalid query request. Sending a slap on the wrist !")
+        # sys.exit()
+        sendEmailReply( IrmaAlertProperties.invalidQuerySubject,
+                        IrmaAlertProperties.invalidQueryBody,
+                        IrmaAlertProperties.attachmentsAck
+                        )
+        return -1
+
+
+
+    #     Send Email Saing invalid date
+
 
     if ( queryYearNum == 2015 ):
         daysSinceFirstFlow = IrmaAlertProperties.diffBetweenEachVisit * \
@@ -533,8 +558,24 @@ def getDaysSinceFirstFlow():
                 )
         )
 
+    if ( daysSinceFirstFlow < 0 ):
+        logging.error("*****  DOOOODE : Look into this. Value for daysSinceFirstFlow is "
+                      "Negative. \nCalculated value : " + str(daysSinceFirstFlow) + " ***** ")
+        sendEmailReply( IrmaAlertProperties.unExpectedConditionSubject,
+                        IrmaAlertProperties.unExpectedConditionBody,
+                        IrmaAlertProperties.attachmentsAck
+                        )
+        return -1
+
     return daysSinceFirstFlow
 
+
+def getAbsoluteFirstData():
+    dd = str( IrmaAlertProperties.firstStartDate )
+    mm = str(  IrmaAlertProperties.firstStartMonth )
+    yy = str( IrmaAlertProperties.firstStartYear )
+
+    return " " + dd + "/" + mm + "/" + yy + " "
 
 
 def checkValidRequesst():
@@ -542,15 +583,18 @@ def checkValidRequesst():
     global queryYearNum
 
 
-    if ( queryMonthNum <= IrmaAlertProperties.firstStartMonth
-         and queryYearNum == 2015
-         ):
-        logging.error(' Cant go before the month of ' + \
-              getExpectedMonthChar(queryMonthNum) + '. \nBreaks ' \
+    if (
+        (queryMonthNum <= IrmaAlertProperties.firstStartMonth and queryYearNum == 2015)
+            or
+        ( queryYearNum < 2015)
+    ):
+
+        logging.error(' Cant go to time before ' + \
+              getAbsoluteFirstData() + '. \nBreaks ' \
               'my <3logic<3 to say this Princess. \nSorry ! ')
         status = False
 
-    logging.debug("Request found to be Valid. Good Boy !")
+    logging.debug("Request found to be Valid. \nGood Girl !")
     status = True
 
     return status
@@ -679,25 +723,20 @@ def getMonthNum(thisMonthChar):
     return monthId
 
 
-    '''
-    options = {
-        "January" : 1,
-        "February": 2,
-        "March": 3,
-        "April": 4,
-        "May": 5,
-        "June": 6,
-        "July": 7,
-        "August": 8,
-        "September": 9,
-        "October": 10,
-        "November": 11,
-        "December": 12
-    }
-    return options[thisMonthChar]
-    '''
-
-
+'''
+Getter for queenBeeEmail
+'''
+def getQueenBeeEmail():
+    global queenBeeEmail
+    return queenBeeEmail
+'''
+Setter for queenBeeEmail
+'''
+def setQueenBeeEmail(emailAddress):
+    global queenBeeEmail
+    queenBeeEmail = emailAddress
+    logging.debug("Queen Bee Email Address saved. Value :" + emailAddress)
+    return
 
 
 
