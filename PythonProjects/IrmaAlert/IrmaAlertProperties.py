@@ -29,11 +29,11 @@ commandConsoleLog = ''
 Mail Parameters
 '''
 #Credentials_Incoming
-gmail_user='whenisirmavisiting'
-gmail_pwd='whenishightide'
+gmail_user=''
+gmail_pwd=''
 
 #Credentials_Outgoing
-outgoing_user='whenisirmavisiting@gmail.com'
+outgoing_user='@gmail.com'
 
 pop_conn = poplib.POP3_SSL('pop.gmail.com')
 pop_conn.user('recent:'+gmail_user)
