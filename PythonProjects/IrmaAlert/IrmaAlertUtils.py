@@ -174,6 +174,19 @@ def setupLogger():
 Method to save each email 'message' along with
 its attachments.
 '''
+
+
+def replyToUser(status):
+    if status.lower().__contains__("unexpected"):
+        sendEmailReply( IrmaAlertProperties.unExpectedConditionSubject,
+                        IrmaAlertProperties.unExpectedConditionBody,
+                        IrmaAlertProperties.emailAttachments
+                        )
+        return
+
+
+
+
 def saveMessage(message):
 
     emailSubject = str(message['subject'])
@@ -209,13 +222,22 @@ def saveMessage(message):
 
                 # extractedMonth = re.search(IrmaAlertProperties.monthRegExString, emailBodyContent,re.IGNORECASE).group(0)
                 extractedMonth = extractRegExIgnoreCase(IrmaAlertProperties.monthRegExString, emailBodyContent)
-
+                if extractedMonth is None:
+                    logging.error("Unable to read Month from sender's email content.");
+                    replyToUser("unExpectedCondition");
+                    return
 
                 logging.debug("Extracted Month : " + extractedMonth)
                 setQueryMonthNum( getMonthNum(extractedMonth) )
 
                 # extractedYear = re.search(IrmaAlertProperties.yearRegExString, emailBodyContent).group(0)
                 extractedYear = extractRegEx(IrmaAlertProperties.yearRegExString, emailBodyContent)
+                if extractedYear is None:
+                    logging.error("Unable to read Year from sender's email content.");
+                    replyToUser("unExpectedCondition");
+                    return
+
+
                 logging.debug("Extracted Year : " + extractedYear)
                 setQueryYearNum( int(extractedYear) )
                 setTriggerServiceFlag()
@@ -581,10 +603,7 @@ def calculateDaysSinceFirstFlow():
     if ( daysSinceFirstFlow < 0 ):
         logging.error("*****  DOOOODE : Look into this. Value for daysSinceFirstFlow is "
                       "Negative. \nCalculated value : " + str(daysSinceFirstFlow) + " ***** ")
-        sendEmailReply( IrmaAlertProperties.unExpectedConditionSubject,
-                        IrmaAlertProperties.unExpectedConditionBody,
-                        IrmaAlertProperties.emailAttachments
-                        )
+        replyToUser("unExpectedCondition");
         return -1
 
     return daysSinceFirstFlow
@@ -780,13 +799,19 @@ def getNewWisdom():
 
 
 def extractRegExIgnoreCase( regularExpression, inputString ):
-    result = re.search(regularExpression, inputString, re.IGNORECASE).group(0)
-    return result
+    result = re.search(regularExpression, inputString, re.IGNORECASE)
+    if result is None :
+        logging.error( "No reg-ex matches found for regex :" +  regularExpression)
+        return None
+    return result.group(0)
 
 
 def extractRegEx( regularExpression, inputString ):
-    result = re.search(regularExpression, inputString ).group(0)
-    return result
+    result = re.search(regularExpression, inputString )
+    if result is None :
+        logging.error( "No reg-ex matches found for regex :" +  regularExpression)
+        return None
+    return result.group(0)
 
 
 

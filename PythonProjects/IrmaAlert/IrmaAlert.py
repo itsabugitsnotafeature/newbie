@@ -41,7 +41,9 @@ NOTE :
         9. **[DONE] : If date given before May 2015. Tell tina to stop being naughty.
         10. Enable Debug Flag in Main.
         11. Code Cleanup : regex refactor
-        12. **[DONE] : Termination string confirmation email
+        12. **[DONE] : Termination string confirmation email.
+        13. Leap year adjustments.
+        14. IF two activation mails are sent consicutively, at same time.
 
 '''
 

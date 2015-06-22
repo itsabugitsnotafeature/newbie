@@ -1,235 +1,148 @@
-2015-06-21 16:29:33,311:DEBUG:Logger setup successful.
-2015-06-21 16:29:33,311:DEBUG:Initializing working directory and other environment varaibles.
-2015-06-21 16:29:33,311:DEBUG:Request found to be Valid. 
+2015-06-21 18:27:31,911:DEBUG:Logger setup successful.
+2015-06-21 18:27:31,912:DEBUG:Initializing working directory and other environment varaibles.
+2015-06-21 18:27:31,912:DEBUG:Request found to be Valid. 
 Good Girl !
-2015-06-21 16:29:33,311:INFO:Total delta calculated [Year 2015]: 26
-2015-06-21 16:29:33,311:DEBUG:Queen Bee Email Address saved. Value :whenisirmavisiting@gmail.com
-2015-06-21 16:29:33,312:DEBUG:Done with setup().
-2015-06-21 16:29:33,312:DEBUG:Email Scanner flag ENABLED. 
-2015-06-21 16:29:33,312:DEBUG:Starting program.
-2015-06-21 16:29:33,312:DEBUG:Iteration #0
-2015-06-21 16:29:33,312:DEBUG:Fetching messages from gmail inbox.
-2015-06-21 16:29:33,724:DEBUG:Logging in.
-2015-06-21 16:29:34,881:DEBUG:Mail downloaded, seperating unseen messages.
-2015-06-21 16:29:35,077:DEBUG:* No New Messages : Returning to caller ! *
-2015-06-21 16:29:35,077:DEBUG:No trigger received thus far.
-2015-06-21 16:29:35,077:DEBUG:Iteration complete. Hibernate for 10 seconds.
-2015-06-21 16:29:45,074:DEBUG:Starting program.
-2015-06-21 16:29:45,074:DEBUG:Iteration #1
-2015-06-21 16:29:45,074:DEBUG:Fetching messages from gmail inbox.
-2015-06-21 16:29:45,384:DEBUG:Logging in.
-2015-06-21 16:29:46,041:DEBUG:Mail downloaded, seperating unseen messages.
-2015-06-21 16:29:46,265:DEBUG:New Unseen messages detected.
-2015-06-21 16:29:46,265:DEBUG:Saving one email with following credentials.
-2015-06-21 16:29:46,646:DEBUG:From: itsabug itsnotafeature <itsabugitsnotafeature@gmail.com>
-2015-06-21 16:29:46,646:DEBUG:Queen Bee Email Address saved. Value :itsabugitsnotafeature@gmail.com
-2015-06-21 16:29:46,646:DEBUG:Subject: life of riddles
-2015-06-21 16:29:46,646:DEBUG:Saving email message.
-2015-06-21 16:29:46,650:DEBUG:Incrementing global email counter
-2015-06-21 16:29:46,650:DEBUG:New Value:1
-2015-06-21 16:29:46,650:DEBUG:Email saved.
-2015-06-21 16:29:46,650:DEBUG:Looking for attachments.
-2015-06-21 16:29:46,650:DEBUG:Saving body content.
-2015-06-21 16:29:46,650:DEBUG: ++ Trigger for Service activation received successfully. ++ 
-2015-06-21 16:29:46,652:DEBUG:Extracted Month : march
-2015-06-21 16:29:46,652:DEBUG:Successfylly set query MONTH to Integer Value :3
-2015-06-21 16:29:46,652:DEBUG:Extracted Year : 2016
-2015-06-21 16:29:46,652:DEBUG:Successfylly set query YEAR to Integer Value :2016
-2015-06-21 16:29:46,652:DEBUG:Service trigger flag ENABLED. 
-2015-06-21 16:29:46,653:DEBUG:No attachments found.
-2015-06-21 16:29:46,653:DEBUG:Done saving message !
-2015-06-21 16:29:46,653:DEBUG:Request found to be Valid. 
-Good Girl !
-2015-06-21 16:29:46,653:DEBUG:Starting Service!
-2015-06-21 16:29:46,653:DEBUG:Days since first flow : 286
-2015-06-21 16:29:46,653:INFO:getURL Value: http://www.timeanddate.com/date/dateadded.html?m1=5&d1=28&y1=2015&type=add&ay=&am=&aw=&ad=286
-2015-06-21 16:29:46,654:INFO:getNextUrl Value: http://www.timeanddate.com/date/dateadded.html?m1=5&d1=28&y1=2015&type=add&ay=&am=&aw=&ad=312
-2015-06-21 16:29:46,755:INFO:Starting new HTTP connection (1): www.timeanddate.com
-2015-06-21 16:29:47,402:DEBUG:"GET /date/dateadded.html?m1=5&d1=28&y1=2015&type=add&ay=&am=&aw=&ad=286 HTTP/1.1" 200 5163
-2015-06-21 16:29:47,411:INFO:Starting new HTTP connection (1): www.timeanddate.com
-2015-06-21 16:29:47,586:DEBUG:"GET /date/dateadded.html?m1=5&d1=28&y1=2015&type=add&ay=&am=&aw=&ad=312 HTTP/1.1" 200 5163
-2015-06-21 16:29:47,588:DEBUG:ValidateResult: Correct result obtained
-2015-06-21 16:29:47,588:INFO:Returning Result : Bae, 
-
-I'll pay you a visit day after Wednesday, March 9 2016. 
-2015-06-21 16:29:47,590:INFO:Starting new HTTP connection (1): www.wisdomofchopra.com
-2015-06-21 16:29:48,718:DEBUG:"GET /iframe.php HTTP/1.1" 200 1682
-2015-06-21 16:29:48,720:DEBUG:Wisdom Fetched : Qualia constructs descriptions of positivity
-2015-06-21 16:29:48,720:DEBUG:
- Python : Done executing Service, replying back with report.
-2015-06-21 16:29:48,720:DEBUG:Sending email to user.
-2015-06-21 16:29:52,060:DEBUG:Successfully sent the mail.
-2015-06-21 16:29:52,060:DEBUG:Done sending email.
-2015-06-21 16:29:52,060:DEBUG:Service trigger flag Disabled. 
-2015-06-21 16:29:52,060:DEBUG:Iteration complete. Hibernate for 10 seconds.
-2015-06-21 16:30:02,057:DEBUG:Starting program.
-2015-06-21 16:30:02,057:DEBUG:Iteration #2
-2015-06-21 16:30:02,057:DEBUG:Fetching messages from gmail inbox.
-2015-06-21 16:30:02,387:DEBUG:Logging in.
-2015-06-21 16:30:03,625:DEBUG:Mail downloaded, seperating unseen messages.
-2015-06-21 16:30:03,920:DEBUG:* No New Messages : Returning to caller ! *
-2015-06-21 16:30:03,921:DEBUG:No trigger received thus far.
-2015-06-21 16:30:03,921:DEBUG:Iteration complete. Hibernate for 10 seconds.
-2015-06-21 16:30:13,917:DEBUG:Starting program.
-2015-06-21 16:30:13,917:DEBUG:Iteration #3
-2015-06-21 16:30:13,918:DEBUG:Fetching messages from gmail inbox.
-2015-06-21 16:30:14,279:DEBUG:Logging in.
-2015-06-21 16:30:15,583:DEBUG:Mail downloaded, seperating unseen messages.
-2015-06-21 16:30:15,798:DEBUG:* No New Messages : Returning to caller ! *
-2015-06-21 16:30:15,799:DEBUG:No trigger received thus far.
-2015-06-21 16:30:15,799:DEBUG:Iteration complete. Hibernate for 10 seconds.
-2015-06-21 16:30:25,795:DEBUG:Starting program.
-2015-06-21 16:30:25,795:DEBUG:Iteration #4
-2015-06-21 16:30:25,795:DEBUG:Fetching messages from gmail inbox.
-2015-06-21 16:30:26,151:DEBUG:Logging in.
-2015-06-21 16:30:26,845:DEBUG:Mail downloaded, seperating unseen messages.
-2015-06-21 16:30:27,148:DEBUG:* No New Messages : Returning to caller ! *
-2015-06-21 16:30:27,148:DEBUG:No trigger received thus far.
-2015-06-21 16:30:27,148:DEBUG:Iteration complete. Hibernate for 10 seconds.
-2015-06-21 16:30:37,145:DEBUG:Starting program.
-2015-06-21 16:30:37,145:DEBUG:Iteration #5
-2015-06-21 16:30:37,145:DEBUG:Fetching messages from gmail inbox.
-2015-06-21 16:30:37,512:DEBUG:Logging in.
-2015-06-21 16:30:38,185:DEBUG:Mail downloaded, seperating unseen messages.
-2015-06-21 16:30:38,402:DEBUG:* No New Messages : Returning to caller ! *
-2015-06-21 16:30:38,402:DEBUG:No trigger received thus far.
-2015-06-21 16:30:38,402:DEBUG:Iteration complete. Hibernate for 10 seconds.
-2015-06-21 16:30:48,398:DEBUG:Starting program.
-2015-06-21 16:30:48,398:DEBUG:Iteration #6
-2015-06-21 16:30:48,399:DEBUG:Fetching messages from gmail inbox.
-2015-06-21 16:30:48,747:DEBUG:Logging in.
-2015-06-21 16:30:49,582:DEBUG:Mail downloaded, seperating unseen messages.
-2015-06-21 16:30:49,794:DEBUG:* No New Messages : Returning to caller ! *
-2015-06-21 16:30:49,794:DEBUG:No trigger received thus far.
-2015-06-21 16:30:49,794:DEBUG:Iteration complete. Hibernate for 10 seconds.
-2015-06-21 16:30:59,790:DEBUG:Starting program.
-2015-06-21 16:30:59,791:DEBUG:Iteration #7
-2015-06-21 16:30:59,791:DEBUG:Fetching messages from gmail inbox.
-2015-06-21 16:31:00,105:DEBUG:Logging in.
-2015-06-21 16:31:01,353:DEBUG:Mail downloaded, seperating unseen messages.
-2015-06-21 16:31:01,574:DEBUG:* No New Messages : Returning to caller ! *
-2015-06-21 16:31:01,575:DEBUG:No trigger received thus far.
-2015-06-21 16:31:01,575:DEBUG:Iteration complete. Hibernate for 10 seconds.
-2015-06-21 16:31:11,571:DEBUG:Starting program.
-2015-06-21 16:31:11,571:DEBUG:Iteration #8
-2015-06-21 16:31:11,572:DEBUG:Fetching messages from gmail inbox.
-2015-06-21 16:31:11,998:DEBUG:Logging in.
-2015-06-21 16:31:12,573:DEBUG:Mail downloaded, seperating unseen messages.
-2015-06-21 16:31:12,838:DEBUG:* No New Messages : Returning to caller ! *
-2015-06-21 16:31:12,838:DEBUG:No trigger received thus far.
-2015-06-21 16:31:12,838:DEBUG:Iteration complete. Hibernate for 10 seconds.
-2015-06-21 16:31:22,835:DEBUG:Starting program.
-2015-06-21 16:31:22,835:DEBUG:Iteration #9
-2015-06-21 16:31:22,835:DEBUG:Fetching messages from gmail inbox.
-2015-06-21 16:31:23,164:DEBUG:Logging in.
-2015-06-21 16:31:24,356:DEBUG:Mail downloaded, seperating unseen messages.
-2015-06-21 16:31:24,571:DEBUG:* No New Messages : Returning to caller ! *
-2015-06-21 16:31:24,572:DEBUG:No trigger received thus far.
-2015-06-21 16:31:24,572:DEBUG:Iteration complete. Hibernate for 10 seconds.
-2015-06-21 16:31:34,567:DEBUG:Starting program.
-2015-06-21 16:31:34,568:DEBUG:Iteration #10
-2015-06-21 16:31:34,568:DEBUG:Fetching messages from gmail inbox.
-2015-06-21 16:31:35,041:DEBUG:Logging in.
-2015-06-21 16:31:36,329:DEBUG:Mail downloaded, seperating unseen messages.
-2015-06-21 16:31:36,567:DEBUG:* No New Messages : Returning to caller ! *
-2015-06-21 16:31:36,567:DEBUG:No trigger received thus far.
-2015-06-21 16:31:36,567:DEBUG:Iteration complete. Hibernate for 10 seconds.
-2015-06-21 16:31:46,564:DEBUG:Starting program.
-2015-06-21 16:31:46,564:DEBUG:Iteration #11
-2015-06-21 16:31:46,564:DEBUG:Fetching messages from gmail inbox.
-2015-06-21 16:31:46,893:DEBUG:Logging in.
-2015-06-21 16:31:48,221:DEBUG:Mail downloaded, seperating unseen messages.
-2015-06-21 16:31:48,442:DEBUG:* No New Messages : Returning to caller ! *
-2015-06-21 16:31:48,443:DEBUG:No trigger received thus far.
-2015-06-21 16:31:48,443:DEBUG:Iteration complete. Hibernate for 10 seconds.
-2015-06-21 16:31:58,439:DEBUG:Starting program.
-2015-06-21 16:31:58,439:DEBUG:Iteration #12
-2015-06-21 16:31:58,439:DEBUG:Fetching messages from gmail inbox.
-2015-06-21 16:31:58,811:DEBUG:Logging in.
-2015-06-21 16:31:59,665:DEBUG:Mail downloaded, seperating unseen messages.
-2015-06-21 16:32:00,074:DEBUG:* No New Messages : Returning to caller ! *
-2015-06-21 16:32:00,074:DEBUG:No trigger received thus far.
-2015-06-21 16:32:00,074:DEBUG:Iteration complete. Hibernate for 10 seconds.
-2015-06-21 16:32:10,070:DEBUG:Starting program.
-2015-06-21 16:32:10,070:DEBUG:Iteration #13
-2015-06-21 16:32:10,070:DEBUG:Fetching messages from gmail inbox.
-2015-06-21 16:32:10,378:DEBUG:Logging in.
-2015-06-21 16:32:11,152:DEBUG:Mail downloaded, seperating unseen messages.
-2015-06-21 16:32:11,348:DEBUG:* No New Messages : Returning to caller ! *
-2015-06-21 16:32:11,349:DEBUG:No trigger received thus far.
-2015-06-21 16:32:11,349:DEBUG:Iteration complete. Hibernate for 10 seconds.
-2015-06-21 16:32:21,345:DEBUG:Starting program.
-2015-06-21 16:32:21,345:DEBUG:Iteration #14
-2015-06-21 16:32:21,345:DEBUG:Fetching messages from gmail inbox.
-2015-06-21 16:32:21,684:DEBUG:Logging in.
-2015-06-21 16:32:22,530:DEBUG:Mail downloaded, seperating unseen messages.
-2015-06-21 16:32:22,758:DEBUG:* No New Messages : Returning to caller ! *
-2015-06-21 16:32:22,758:DEBUG:No trigger received thus far.
-2015-06-21 16:32:22,758:DEBUG:Iteration complete. Hibernate for 10 seconds.
-2015-06-21 16:32:32,753:DEBUG:Starting program.
-2015-06-21 16:32:32,754:DEBUG:Iteration #15
-2015-06-21 16:32:32,754:DEBUG:Fetching messages from gmail inbox.
-2015-06-21 16:32:33,145:DEBUG:Logging in.
-2015-06-21 16:32:34,460:DEBUG:Mail downloaded, seperating unseen messages.
-2015-06-21 16:32:34,671:DEBUG:* No New Messages : Returning to caller ! *
-2015-06-21 16:32:34,672:DEBUG:No trigger received thus far.
-2015-06-21 16:32:34,672:DEBUG:Iteration complete. Hibernate for 10 seconds.
-2015-06-21 16:32:44,667:DEBUG:Starting program.
-2015-06-21 16:32:44,668:DEBUG:Iteration #16
-2015-06-21 16:32:44,668:DEBUG:Fetching messages from gmail inbox.
-2015-06-21 16:32:45,024:DEBUG:Logging in.
-2015-06-21 16:32:45,834:DEBUG:Mail downloaded, seperating unseen messages.
-2015-06-21 16:32:46,060:DEBUG:* No New Messages : Returning to caller ! *
-2015-06-21 16:32:46,060:DEBUG:No trigger received thus far.
-2015-06-21 16:32:46,061:DEBUG:Iteration complete. Hibernate for 10 seconds.
-2015-06-21 16:32:56,057:DEBUG:Starting program.
-2015-06-21 16:32:56,057:DEBUG:Iteration #17
-2015-06-21 16:32:56,057:DEBUG:Fetching messages from gmail inbox.
-2015-06-21 16:32:56,395:DEBUG:Logging in.
-2015-06-21 16:32:58,625:DEBUG:Mail downloaded, seperating unseen messages.
-2015-06-21 16:32:59,030:DEBUG:* No New Messages : Returning to caller ! *
-2015-06-21 16:32:59,030:DEBUG:No trigger received thus far.
-2015-06-21 16:32:59,030:DEBUG:Iteration complete. Hibernate for 10 seconds.
-2015-06-21 16:33:09,027:DEBUG:Starting program.
-2015-06-21 16:33:09,027:DEBUG:Iteration #18
-2015-06-21 16:33:09,027:DEBUG:Fetching messages from gmail inbox.
-2015-06-21 16:33:09,393:DEBUG:Logging in.
-2015-06-21 16:33:12,758:DEBUG:Mail downloaded, seperating unseen messages.
-2015-06-21 16:33:13,161:DEBUG:* No New Messages : Returning to caller ! *
-2015-06-21 16:33:13,162:DEBUG:No trigger received thus far.
-2015-06-21 16:33:13,162:DEBUG:Iteration complete. Hibernate for 10 seconds.
-2015-06-21 16:33:23,157:DEBUG:Starting program.
-2015-06-21 16:33:23,158:DEBUG:Iteration #19
-2015-06-21 16:33:23,158:DEBUG:Fetching messages from gmail inbox.
-2015-06-21 16:33:24,007:DEBUG:Logging in.
-2015-06-21 16:33:24,724:DEBUG:Mail downloaded, seperating unseen messages.
-2015-06-21 16:33:24,919:DEBUG:* No New Messages : Returning to caller ! *
-2015-06-21 16:33:24,919:DEBUG:No trigger received thus far.
-2015-06-21 16:33:24,919:DEBUG:Iteration complete. Hibernate for 10 seconds.
-2015-06-21 16:33:34,916:DEBUG:Starting program.
-2015-06-21 16:33:34,916:DEBUG:Iteration #20
-2015-06-21 16:33:34,916:DEBUG:Fetching messages from gmail inbox.
-2015-06-21 16:33:35,208:DEBUG:Logging in.
-2015-06-21 16:33:36,433:DEBUG:Mail downloaded, seperating unseen messages.
-2015-06-21 16:33:36,633:DEBUG:New Unseen messages detected.
-2015-06-21 16:33:36,633:DEBUG:Saving one email with following credentials.
-2015-06-21 16:33:37,013:DEBUG:From: itsabug itsnotafeature <itsabugitsnotafeature@gmail.com>
-2015-06-21 16:33:37,014:DEBUG:Queen Bee Email Address saved. Value :itsabugitsnotafeature@gmail.com
-2015-06-21 16:33:37,014:DEBUG:Subject: DISASTROPHE is disastrophe is catastrophe meets disaster
-2015-06-21 16:33:37,014:DEBUG:Saving email message.
-2015-06-21 16:33:37,014:DEBUG: ### TERMINATE SCANNER CODE RECEIVED #### 
-2015-06-21 16:33:37,014:DEBUG:Sending email to user.
-2015-06-21 16:33:40,507:DEBUG:Successfully sent the mail.
-2015-06-21 16:33:40,508:DEBUG:Done sending email.
-2015-06-21 16:33:40,508:DEBUG:Email Scanner flag DISABLED. 
-2015-06-21 16:33:40,508:DEBUG:Termination flag set to: False
-2015-06-21 16:33:40,510:DEBUG:Incrementing global email counter
-2015-06-21 16:33:40,511:DEBUG:New Value:2
-2015-06-21 16:33:40,511:DEBUG:Email saved.
-2015-06-21 16:33:40,511:DEBUG:Looking for attachments.
-2015-06-21 16:33:40,511:DEBUG:Saving body content.
-2015-06-21 16:33:40,511:DEBUG:No attachments found.
-2015-06-21 16:33:40,511:DEBUG:Done saving message !
-2015-06-21 16:33:40,511:DEBUG:No trigger received thus far.
-2015-06-21 16:33:40,512:DEBUG:Goodbye Master !! 
-**** Terminating program ****
+2015-06-21 18:27:31,912:INFO:Total delta calculated [Year 2015]: 26
+2015-06-21 18:27:31,912:DEBUG:Queen Bee Email Address saved. Value :whenisirmavisiting@gmail.com
+2015-06-21 18:27:31,912:DEBUG:Done with setup().
+2015-06-21 18:27:31,912:DEBUG:Email Scanner flag ENABLED. 
+2015-06-21 18:27:31,912:DEBUG:Starting program.
+2015-06-21 18:27:31,912:DEBUG:Iteration #0
+2015-06-21 18:27:31,912:DEBUG:Fetching messages from gmail inbox.
+2015-06-21 18:27:32,283:DEBUG:Logging in.
+2015-06-21 18:27:33,544:DEBUG:Mail downloaded, seperating unseen messages.
+2015-06-21 18:27:33,758:DEBUG:* No New Messages : Returning to caller ! *
+2015-06-21 18:27:33,759:DEBUG:No trigger received thus far.
+2015-06-21 18:27:33,759:DEBUG:Iteration complete. Hibernate for 10 seconds.
+2015-06-21 18:27:43,756:DEBUG:Starting program.
+2015-06-21 18:27:43,756:DEBUG:Iteration #1
+2015-06-21 18:27:43,756:DEBUG:Fetching messages from gmail inbox.
+2015-06-21 18:27:44,067:DEBUG:Logging in.
+2015-06-21 18:27:45,333:DEBUG:Mail downloaded, seperating unseen messages.
+2015-06-21 18:27:45,727:DEBUG:New Unseen messages detected.
+2015-06-21 18:27:45,727:DEBUG:Saving one email with following credentials.
+2015-06-21 18:27:46,246:DEBUG:From: itsabug itsnotafeature <itsabugitsnotafeature@gmail.com>
+2015-06-21 18:27:46,247:DEBUG:Queen Bee Email Address saved. Value :itsabugitsnotafeature@gmail.com
+2015-06-21 18:27:46,247:DEBUG:Subject: bug 1 riddle
+2015-06-21 18:27:46,247:DEBUG:Saving email message.
+2015-06-21 18:27:46,251:DEBUG:Incrementing global email counter
+2015-06-21 18:27:46,251:DEBUG:New Value:1
+2015-06-21 18:27:46,251:DEBUG:Email saved.
+2015-06-21 18:27:46,251:DEBUG:Looking for attachments.
+2015-06-21 18:27:46,251:DEBUG:Saving body content.
+2015-06-21 18:27:46,251:DEBUG: ++ Trigger for Service activation received successfully. ++ 
+2015-06-21 18:27:46,253:DEBUG:Extracted Month : june
+2015-06-21 18:27:46,253:DEBUG:Successfylly set query MONTH to Integer Value :6
+2015-06-21 18:27:46,253:ERROR:No reg-ex matches found for regex :20[0-9][0-9]
+2015-06-21 18:27:46,253:ERROR:Unable to read Year from sender's email content.
+2015-06-21 18:27:46,253:DEBUG:Sending email to user.
+2015-06-21 18:27:51,147:DEBUG:Successfully sent the mail.
+2015-06-21 18:27:51,147:DEBUG:Done sending email.
+2015-06-21 18:27:51,147:DEBUG:No trigger received thus far.
+2015-06-21 18:27:51,148:DEBUG:Iteration complete. Hibernate for 10 seconds.
+2015-06-21 18:28:01,143:DEBUG:Starting program.
+2015-06-21 18:28:01,143:DEBUG:Iteration #2
+2015-06-21 18:28:01,144:DEBUG:Fetching messages from gmail inbox.
+2015-06-21 18:28:01,434:DEBUG:Logging in.
+2015-06-21 18:28:02,100:DEBUG:Mail downloaded, seperating unseen messages.
+2015-06-21 18:28:02,304:DEBUG:New Unseen messages detected.
+2015-06-21 18:28:02,304:DEBUG:Saving one email with following credentials.
+2015-06-21 18:28:02,666:DEBUG:From: itsabug itsnotafeature <itsabugitsnotafeature@gmail.com>
+2015-06-21 18:28:02,666:DEBUG:Queen Bee Email Address saved. Value :itsabugitsnotafeature@gmail.com
+2015-06-21 18:28:02,667:DEBUG:Subject: bug 2 riddle
+2015-06-21 18:28:02,667:DEBUG:Saving email message.
+2015-06-21 18:28:02,668:DEBUG:Incrementing global email counter
+2015-06-21 18:28:02,668:DEBUG:New Value:2
+2015-06-21 18:28:02,668:DEBUG:Email saved.
+2015-06-21 18:28:02,668:DEBUG:Looking for attachments.
+2015-06-21 18:28:02,668:DEBUG:Saving body content.
+2015-06-21 18:28:02,669:DEBUG: ++ Trigger for Service activation received successfully. ++ 
+2015-06-21 18:28:02,669:DEBUG:Extracted Month : june
+2015-06-21 18:28:02,669:DEBUG:Successfylly set query MONTH to Integer Value :6
+2015-06-21 18:28:02,669:ERROR:No reg-ex matches found for regex :20[0-9][0-9]
+2015-06-21 18:28:02,669:ERROR:Unable to read Year from sender's email content.
+2015-06-21 18:28:02,669:DEBUG:Sending email to user.
+2015-06-21 18:28:06,274:DEBUG:Successfully sent the mail.
+2015-06-21 18:28:06,274:DEBUG:Done sending email.
+2015-06-21 18:28:06,274:DEBUG:No trigger received thus far.
+2015-06-21 18:28:06,274:DEBUG:Iteration complete. Hibernate for 10 seconds.
+2015-06-21 18:28:16,271:DEBUG:Starting program.
+2015-06-21 18:28:16,271:DEBUG:Iteration #3
+2015-06-21 18:28:16,271:DEBUG:Fetching messages from gmail inbox.
+2015-06-21 18:28:16,563:DEBUG:Logging in.
+2015-06-21 18:28:17,781:DEBUG:Mail downloaded, seperating unseen messages.
+2015-06-21 18:28:17,993:DEBUG:* No New Messages : Returning to caller ! *
+2015-06-21 18:28:17,994:DEBUG:No trigger received thus far.
+2015-06-21 18:28:17,994:DEBUG:Iteration complete. Hibernate for 10 seconds.
+2015-06-21 18:28:27,990:DEBUG:Starting program.
+2015-06-21 18:28:27,991:DEBUG:Iteration #4
+2015-06-21 18:28:27,991:DEBUG:Fetching messages from gmail inbox.
+2015-06-21 18:28:28,301:DEBUG:Logging in.
+2015-06-21 18:28:29,626:DEBUG:Mail downloaded, seperating unseen messages.
+2015-06-21 18:28:29,834:DEBUG:* No New Messages : Returning to caller ! *
+2015-06-21 18:28:29,834:DEBUG:No trigger received thus far.
+2015-06-21 18:28:29,834:DEBUG:Iteration complete. Hibernate for 10 seconds.
+2015-06-21 18:28:39,830:DEBUG:Starting program.
+2015-06-21 18:28:39,831:DEBUG:Iteration #5
+2015-06-21 18:28:39,831:DEBUG:Fetching messages from gmail inbox.
+2015-06-21 18:28:40,223:DEBUG:Logging in.
+2015-06-21 18:28:40,987:DEBUG:Mail downloaded, seperating unseen messages.
+2015-06-21 18:28:41,183:DEBUG:* No New Messages : Returning to caller ! *
+2015-06-21 18:28:41,184:DEBUG:No trigger received thus far.
+2015-06-21 18:28:41,184:DEBUG:Iteration complete. Hibernate for 10 seconds.
+2015-06-21 18:28:51,180:DEBUG:Starting program.
+2015-06-21 18:28:51,180:DEBUG:Iteration #6
+2015-06-21 18:28:51,181:DEBUG:Fetching messages from gmail inbox.
+2015-06-21 18:28:51,535:DEBUG:Logging in.
+2015-06-21 18:28:52,743:DEBUG:Mail downloaded, seperating unseen messages.
+2015-06-21 18:28:52,968:DEBUG:* No New Messages : Returning to caller ! *
+2015-06-21 18:28:52,969:DEBUG:No trigger received thus far.
+2015-06-21 18:28:52,969:DEBUG:Iteration complete. Hibernate for 10 seconds.
+2015-06-21 18:29:02,965:DEBUG:Starting program.
+2015-06-21 18:29:02,965:DEBUG:Iteration #7
+2015-06-21 18:29:02,966:DEBUG:Fetching messages from gmail inbox.
+2015-06-21 18:29:03,274:DEBUG:Logging in.
+2015-06-21 18:29:03,846:DEBUG:Mail downloaded, seperating unseen messages.
+2015-06-21 18:29:04,075:DEBUG:* No New Messages : Returning to caller ! *
+2015-06-21 18:29:04,075:DEBUG:No trigger received thus far.
+2015-06-21 18:29:04,075:DEBUG:Iteration complete. Hibernate for 10 seconds.
+2015-06-21 18:29:14,071:DEBUG:Starting program.
+2015-06-21 18:29:14,072:DEBUG:Iteration #8
+2015-06-21 18:29:14,072:DEBUG:Fetching messages from gmail inbox.
+2015-06-21 18:29:14,420:DEBUG:Logging in.
+2015-06-21 18:29:15,207:DEBUG:Mail downloaded, seperating unseen messages.
+2015-06-21 18:29:15,406:DEBUG:New Unseen messages detected.
+2015-06-21 18:29:15,406:DEBUG:Saving one email with following credentials.
+2015-06-21 18:29:15,771:DEBUG:From: itsabug itsnotafeature <itsabugitsnotafeature@gmail.com>
+2015-06-21 18:29:15,771:DEBUG:Queen Bee Email Address saved. Value :itsabugitsnotafeature@gmail.com
+2015-06-21 18:29:15,771:DEBUG:Subject: riddle bug test 3
+2015-06-21 18:29:15,771:DEBUG:Saving email message.
+2015-06-21 18:29:15,773:DEBUG:Incrementing global email counter
+2015-06-21 18:29:15,773:DEBUG:New Value:3
+2015-06-21 18:29:15,773:DEBUG:Email saved.
+2015-06-21 18:29:15,773:DEBUG:Looking for attachments.
+2015-06-21 18:29:15,773:DEBUG:Saving body content.
+2015-06-21 18:29:15,773:DEBUG: ++ Trigger for Service activation received successfully. ++ 
+2015-06-21 18:29:15,774:ERROR:No reg-ex matches found for regex :jan[A-Z]*|feb[A-Z]*|mar[A-Z]*|apr[A-Z]*|may|jun[A-Z]*|jul[A-Z]*|aug[A-Z]*|sep[A-Z]*|oct[A-Z]*|nov[A-Z]*|dec[A-Z]*
+2015-06-21 18:29:15,774:ERROR:Unable to read Month from sender's email content.
+2015-06-21 18:29:15,774:DEBUG:Sending email to user.
+2015-06-21 18:29:18,761:DEBUG:Successfully sent the mail.
+2015-06-21 18:29:18,761:DEBUG:Done sending email.
+2015-06-21 18:29:18,762:DEBUG:No trigger received thus far.
+2015-06-21 18:29:18,762:DEBUG:Iteration complete. Hibernate for 10 seconds.
+2015-06-21 18:29:28,759:DEBUG:Starting program.
+2015-06-21 18:29:28,759:DEBUG:Iteration #9
+2015-06-21 18:29:28,759:DEBUG:Fetching messages from gmail inbox.
+2015-06-21 18:29:29,063:DEBUG:Logging in.
+2015-06-21 18:29:30,228:DEBUG:Mail downloaded, seperating unseen messages.
+2015-06-21 18:29:30,428:DEBUG:* No New Messages : Returning to caller ! *
+2015-06-21 18:29:30,428:DEBUG:No trigger received thus far.
+2015-06-21 18:29:30,428:DEBUG:Iteration complete. Hibernate for 10 seconds.
+2015-06-21 18:29:40,426:DEBUG:Starting program.
+2015-06-21 18:29:40,426:DEBUG:Iteration #10
+2015-06-21 18:29:40,426:DEBUG:Fetching messages from gmail inbox.
+2015-06-21 18:29:40,806:DEBUG:Logging in.
+2015-06-21 18:29:41,446:DEBUG:Mail downloaded, seperating unseen messages.
+2015-06-21 18:29:41,640:DEBUG:* No New Messages : Returning to caller ! *
+2015-06-21 18:29:41,641:DEBUG:No trigger received thus far.
+2015-06-21 18:29:41,641:DEBUG:Iteration complete. Hibernate for 10 seconds.
