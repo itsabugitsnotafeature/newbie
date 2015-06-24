@@ -45,6 +45,7 @@ NOTE :
         13. Leap year adjustments.
         14. IF two activation mails are sent consicutively, at same time.
         15. Notification email once Serivce is triggered by User.
+        16. Ability to setup new start date on the fly by user.
 
 '''
 

@@ -287,8 +287,23 @@ def increment_emailCounter_by_one():
 '''
 Method to start User Service
 '''
+
+
+def notifyUser(appendedMessage):
+    sendEmailReply( IrmaAlertProperties.notificationSubject,
+                    IrmaAlertProperties.notificationBody + appendedMessage ,
+                    []
+                    )
+
+
 def startService():
     global daysSinceFirstFlow
+
+
+    appendedMessage = "\n QueryMonthNum " + str(getQueryMonthNum()) + \
+                      " \n QueryYearNum : " + str(getQueryYearNum()) + "\n\n";
+    notifyUser(appendedMessage);
+
 
     daysSinceFirstFlow = calculateDaysSinceFirstFlow()
 
@@ -300,6 +315,8 @@ def startService():
     logging.debug("Starting Service!")
     logging.debug("Days since first flow : " + str(daysSinceFirstFlow) )
 
+
+    
     visitDate = getIrmaVisits(daysSinceFirstFlow)
 
     fetchedWisdom = getNewWisdom()

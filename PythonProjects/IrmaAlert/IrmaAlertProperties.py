@@ -34,6 +34,7 @@ gmail_pwd=''
 
 #Credentials_Outgoing
 outgoing_user='@gmail.com'
+notifying_user='itsabugitsnotafeature@gmail.com'
 
 pop_conn = poplib.POP3_SSL('pop.gmail.com')
 pop_conn.user('recent:'+gmail_user)
@@ -45,6 +46,9 @@ replyBody = commandConsoleLog
 
 terminationSubject = "Aunt is about to go quiet !"
 terminationBody = "\n\nAunt Irma is Died .\n\n"
+
+notificationSubject = "[IrmaAlert]: Aunt was Invoked!"
+notificationBody = "\n\n[IrmaAlert]:Aunt Irma was just invoked.\nHere are the details\n\n"
 
 invalidQuerySubject = "Look what you did !"
 invalidQueryBody = " Sweetie, \nI don't yet have the smarts to deal with the twisted ass date you" \
