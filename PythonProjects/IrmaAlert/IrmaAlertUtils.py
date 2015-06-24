@@ -12,7 +12,7 @@ import re
 import logging
 import sys
 import email, imaplib, os
-import commandWorker
+
 
 
 from email import parser
@@ -314,29 +314,6 @@ def startService():
     resetTriggerServiceFlag()
 
 
-'''
-Method to execute user defined
-@:param [commandToExecute]
-'''
-def executeCommand(commandToExecute):
-    from subprocess import Popen
-
-    logging.debug("######################################################")
-    logging.debug("########         HERE    WE  GO             ##########")
-    logging.debug("######################################################")
-
-
-
-    logging.debug("Executing Command ::" + commandToExecute)
-
-    commandWorkerObject = commandWorker.Command(commandToExecute)
-
-    commandWorkerObject.run( getCommandTimeOutPeriod() )
-
-    logging.debug("Command execution COMPLETED !")
-    return
-
-
 
 
 '''
@@ -632,9 +609,9 @@ def checkValidRequesst():
               getAbsoluteFirstData() + '. \nBreaks ' \
               'my <3logic<3 to say this Princess. \nSorry ! ')
         status = False
-
-    logging.debug("Request found to be Valid. \nGood Girl !")
-    status = True
+    else:
+        logging.debug("Request found to be Valid. \nGood Girl !")
+        status = True
 
     return status
 

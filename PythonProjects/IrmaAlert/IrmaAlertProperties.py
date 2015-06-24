@@ -47,7 +47,7 @@ terminationSubject = "Aunt is about to go quiet !"
 terminationBody = "\n\nAunt Irma is Died .\n\n"
 
 invalidQuerySubject = "Look what you did !"
-invalidQueryBody = " Sweetie, \nI don't yet have the smarts deal with the twisted ass date you" \
+invalidQueryBody = " Sweetie, \nI don't yet have the smarts to deal with the twisted ass date you" \
                    " sent. Better luck next time ! \n\nXoXo \nAunt Irma"
 
 unExpectedConditionSubject = "Oops ! Something Unexpected happened"
@@ -65,8 +65,8 @@ IRMA Service API Parameters
 # url = 'http://www.timeanddate.com/date/dateadded.html?m1=12&d1=22&y1=2015&type=add&ay=&am=&aw=&ad=26e'
 diffBetweenEachVisit = 26
 
-firstStartDate   = 28
-firstStartMonth  = 5
+firstStartDate   = 21
+firstStartMonth  = 6
 firstStartYear   = 2015
 
 targetMonthNum = 6
