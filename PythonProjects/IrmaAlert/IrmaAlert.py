@@ -43,8 +43,8 @@ NOTE :
         11. Code Cleanup : regex refactor
         12. **[DONE] : Termination string confirmation email.
         13. Leap year adjustments.
-        14. IF two activation mails are sent consicutively, at same time.
-        15. Notification email once Serivce is triggered by User.
+        14. **[DONE] : IF two activation mails are sent consicutively, at same time, Latest one will be processed.
+        15. **[DONE] : Notification email once Serivce is triggered by User.
         16. Ability to setup new start date on the fly by user.
 
 '''

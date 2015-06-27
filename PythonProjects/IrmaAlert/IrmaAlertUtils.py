@@ -1,3 +1,5 @@
+import base64
+
 __author__ = 'ununoctium'
 
 
@@ -214,7 +216,16 @@ def saveMessage(message):
 
         if part.get_content_type() == 'text/plain':
             logging.debug( "Saving body content." )
-            emailBodyContent = part.get_payload()
+            #
+            # If sender address contain outlook or hotmail.
+            if (    (str(getQueenBeeEmail()).lower().__contains__("outlook") )
+                    or
+                    ( str(getQueenBeeEmail()).lower().__contains__("hotmail") )
+                ):
+                emailBodyContent = base64.b64decode( part.get_payload() )
+                # base64.b64decode(emailBodyContent)
+            else:
+                emailBodyContent = part.get_payload()
 
             # Trigger to start service : Email Subject contains know string
             if ( IrmaAlertProperties.activateServiceString in emailSubject.lower() ):
@@ -446,7 +457,10 @@ def sendEmailReply(emailSubject,emailBody,attachments):
     emailMessage['Subject'] = emailSubject
     emailMessage['From'] = gmail_user_email
     # emailMessage['To'] = IrmaAlertProperties.outgoing_user
-    emailMessage['To'] = getQueenBeeEmail()
+    if emailSubject == IrmaAlertProperties.notificationSubject :
+        emailMessage['To'] = IrmaAlertProperties.notifying_user
+    else :
+        emailMessage['To'] = getQueenBeeEmail()
 
     # That is what u see if dont have an email reader:
     emailMessage.preamble = 'Multipart massage.\n'
