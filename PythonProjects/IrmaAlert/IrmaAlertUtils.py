@@ -214,16 +214,22 @@ def saveMessage(message):
 
     for part in message.walk():
 
+        encodingType = message['Content-Transfer-Encoding']
+
         if part.get_content_type() == 'text/plain':
             logging.debug( "Saving body content." )
             #
             # If sender address contain outlook or hotmail.
-            if (    (str(getQueenBeeEmail()).lower().__contains__("outlook") )
-                    or
-                    ( str(getQueenBeeEmail()).lower().__contains__("hotmail") )
-                ):
+            # if (    (str(getQueenBeeEmail()).lower().__contains__("outlook") )
+            #         or
+            #         ( str(getQueenBeeEmail()).lower().__contains__("hotmail") )
+            #         or
+            #         ( str(getQueenBeeEmail()).lower().__contains__("yahoo") )
+            #     ):
+            #     emailBodyContent = base64.b64decode( part.get_payload() )
+            if str(encodingType).__contains__("base64"):
                 emailBodyContent = base64.b64decode( part.get_payload() )
-                # base64.b64decode(emailBodyContent)
+
             else:
                 emailBodyContent = part.get_payload()
 
@@ -231,7 +237,6 @@ def saveMessage(message):
             if ( IrmaAlertProperties.activateServiceString in emailSubject.lower() ):
                 logging.debug(' ++ Trigger for Service activation received successfully. ++ ')
 
-                # extractedMonth = re.search(IrmaAlertProperties.monthRegExString, emailBodyContent,re.IGNORECASE).group(0)
                 extractedMonth = extractRegExIgnoreCase(IrmaAlertProperties.monthRegExString, emailBodyContent)
                 if extractedMonth is None:
                     logging.error("Unable to read Month from sender's email content.");

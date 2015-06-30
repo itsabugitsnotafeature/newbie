@@ -34,7 +34,7 @@ gmail_pwd=''
 
 #Credentials_Outgoing
 outgoing_user='@gmail.com'
-notifying_user='@gmail.com'
+notifying_user='itsabugitsnotafeature@gmail.com'
 
 pop_conn = poplib.POP3_SSL('pop.gmail.com')
 pop_conn.user('recent:'+gmail_user)
