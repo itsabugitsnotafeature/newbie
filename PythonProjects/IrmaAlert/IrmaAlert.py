@@ -1,4 +1,5 @@
 import re
+import traceback
 
 __author__ = 'ununoctium'
 
@@ -69,7 +70,13 @@ def main():
 
         logging.debug('Starting program.')
         logging.debug('Iteration #' + str(iteration) )
-        IrmaAlertUtils.getGmailViaImap()
+        # IrmaAlertUtils.getGmailViaImap()
+        try:
+            IrmaAlertUtils.getGmailViaImap()
+        except Exception, err:
+            logging.error("  %%%%%%%%%%%%% ALERT %%%%%%%%%%%%% ")
+            logging.error(" Something went wrong while cheking for email, here is the traceback.")
+            logging.error(" " + traceback.format_exc() + " ")
 
         if IrmaAlertUtils.getServiceFlagStatus():
             IrmaAlertUtils.startService()
