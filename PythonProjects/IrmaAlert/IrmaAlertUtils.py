@@ -336,7 +336,7 @@ def startService():
     visitDate = getIrmaVisits(daysSinceFirstFlow)
 
     fetchedWisdom = getNewWisdom()
-    emailBody = visitDate + "\n" + "But remember, " + fetchedWisdom +  "\n\nXoXo \nAunt Irma"
+    emailBody = visitDate + "\n\n" + "But remember, " + fetchedWisdom +  "\n\nXoXo \nAunt Irma" + ". "
 
     logging.debug("\n Python : Done executing Service, replying back with report.")
 
@@ -693,8 +693,12 @@ def getIrmaVisits(daysSinceFirstFlow):
 
 
     if (receivedMonthChar == nextReceivedMonthChar):
-        resultString = "\nFirst visit is day AFTER : " + str(receivedDate) + " " + str(queryYearNum)
-        resultString += "\nSecond visit is day AFTER : " + str(nextReceivedDate) + " " + str(queryYearNum)
+        resultString = "Bae, \n\n This happens to be one of your lucky months.\n " \
+                       "I am going to be visiting you twice. Yahoo ! " \
+                       " Please don't get samosa for my welcome, suna hai aajkal Haija bada faail rakha hai. Anyhow, " \
+                       "here are the dates.\n\n" \
+                       "First visit is day after : " + str(receivedDate) + " " + str(queryYearNum)
+        resultString += "\nSecond visit is day after : " + str(nextReceivedDate) + " " + str(queryYearNum) + ". "
 
     else:
         resultString = "Bae, \n\nI'll pay you a visit day after " + str(receivedDate) + " " + str(queryYearNum) +". "

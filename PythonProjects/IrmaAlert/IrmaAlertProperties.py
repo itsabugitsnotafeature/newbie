@@ -79,7 +79,12 @@ targetYearNum = 2015
 resultRegExpString = 'Result: ([A-Z])\w+, ([A-Z])\w+ ([0-9])*'
 resultDateRegExpString = '([A-Z])\w+, ([A-Z])\w+ ([0-9])*'
 # monthRegExString = 'January|February|March|April|May|June|July|August|September|October|November|December'
-monthRegExString = 'jan[A-Z]*|feb[A-Z]*|mar[A-Z]*|apr[A-Z]*|may|jun[A-Z]*|jul[A-Z]*|aug[A-Z]*|sep[A-Z]*|oct[A-Z]*|nov[A-Z]*|dec[A-Z]*'
+# monthRegExString = 'jan[A-Z]*|feb[A-Z]*|mar[A-Z]*|apr[A-Z]*|may|jun[A-Z]*|jul[A-Z]*|aug[A-Z]*|sep[A-Z]*|oct[A-Z]*|nov[A-Z]*|dec[A-Z]*'
+monthRegExString = ' jan |January| feb |February| mar |March|' \
+                   ' apr |April| may | jun |june| jul |july| ' \
+                   ' aug |August| sep |September| oct |October|' \
+                   ' nov |November| dec |December'
+
 yearRegExString = '20[0-9][0-9]'
 emailIdRegExString = '\w+@[\w.-]+|\{(?:\w+, *)+\w+\}@[\w.-]+'
 
